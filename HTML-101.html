@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Short description of the page...">
+		<title>Basic HTML</title>
+	</head>
+	<body>
+		
+		<!-- This is a comment, it wil not show up on the page in a regular browser, but will be part of the source code, and thus be visible, of sorts, on the web. -->
+		
+		<h1>HTML 101 - a primer</h1>
+		
+		<p>This HTML page contains some pointers for making HTML pages.</p>
+		
+		<h2>Elements</h2>
+		
+		<p>HTML is a Markup Language that uses tags to "mark up" your content. 
+		<p>​​An element is the tag and it's content, like &lt;h1&gt;My title&lt;/h1&gt;, here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
+		<p>An attribute gives more info or function to the elements (tags), like &lt;h1 lang="en"&gt;My title&lt;/h1&gt;, where the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
+		<p>Nested tags, ie. when you use a tag within a tag, like &lt;body&gt;&lt;h1&gt;My title&lt;/h1&gt;&lt;/body&gt;, make sure child tags are closed before parents. If not, and you try something like &lt;body&gt;&lt;h1&gt;My title&lt;/body&gt;&lt;/h1&gt; you might run into all kinds of trouble.</p>
+		
+		<h2>Use Headers for structure, <em>not</em> formatting</h2>
+		
+		<p>There should only be one &lt;h1&gt; tag on each page; or, more spesifically, only one per equal important section on the page, for multi-section pages.</p>
+		<p>Then use &lt;h2&gt; for the next level, &lt;h3&gt; for the next, and so on (until &lt;h6&gt; if needed). This establishes a semantic structure (content hierarchy) for the content on your page. Use style/stylesheets to format the headings, if needed, as you do with all other content on your page (ie. if you want the h3 to be larger, do not substitute it with a h2 just because that is bigger by default).</p>
+		
+		<h2>Paragraphs</h2>
+
+		<p>Use &lt;p&gt; for making paragraph tags on your page. This is the standard body text ("brødtekst") for content on your page, one tag per paragraph ("avsnitt"), and problably - along with &lt;div&gt; perhaps - the most often used tag in HTML.</p>
+		
+		<p>Note that even though the closing paragraph tag technically are optional, it's best practice to always include the closing tag, &lt;/p&gt;.</p>
+
+		<h2>Line breaks</h2>
+		<p>Sometimes you don't want a whole new paragraph, but you ned a new line. To do this, you add a line break, with the &lt;br&gt; tag, which do not need a closing tag, like this: <br>This is on a separate line,<br>and this on another new line,<br>and another one, but all are part of the same paragraph.</p>
+		<p>Note that in the xhtml days you had to close all tags, and then some tags were re-defined as selfclosing, and you might find examples of this, with line break tag (and others) looking like this: &lt;br/&gt; or &lt;br /&gt; </p>
+		
+		<h2>Emphazising tekst</h2>
+		<p>There are two different ways of emphasizing text, by making it bolder or italic, and HTML contains two ways of doing this, the old, typographical way, and the more modern, semantic way. You can use &lt;b&gt; and &lt;i&gt; to make text <b>bolder</b> or <i>italic</i>; or you can use &lt;strong&gt; and &lt;em&gt; to ephazise the meaning. The <strong>strong tag will display as bold</strong>, while <em>the em tag will use italics</em>, in most browsers; but for instance web readers (uses by disabled and others) will differentiate these.</p>
+		
+		<h2>Links</h2>
+		<p>Links are a integral part of HTML.</p>	
+		
+		<h2>Lists</h2>
+		
+		<h3>Unrdered lists</h3>	
+		<h3>Ordered lists</h3>	
+		<h3>Definition lists</h3>	
+
+		<h2>Images</h2>
+		<p>Images are placed onto an HTML site using the &lt;img&gt; tag. The image tag is of a kind called replaced content, which means that whenever a browser encounters it, it will stop and replace the tag with whatever it references. To make the reference the image tag has one all important attribute, <em>src</em>, to point to the source file. The other mandatory attribute for images is the <em>alt</em> tag that should be used to describe what's on the photo. There's also a few optional attributes, like target, width and height.</p>
+		<p>The image tag should look like this &lt;img src="path/to/image.kind" alt="Desciption og what's shown on the image"&gt; (note that this is a non closing tag, so you do not need a &lt;/img&gt;).</p>
+		<p>The src attribute points to the image, and usually it will do this relative to the HTML file that includes it, so: If the images are in a folder called "media" on the same level at the HTML file the path is "media/your-image.kind". On more complex setups the path can be longer.</p>
+		<p>So to embed an image after this paragraph we set up en image tag like this:<br> &lt;img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf"&gt;<br>...and it will show up like this:</p>
+		
+		 <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
+		
+		<h3>JPEG</h3>
+		<p>&nbsp;</p>
+		
+		<h3>Gif and PNG</h3>
+		<p>&nbsp;</p>
+		
+		<h3>SVG</h3>
+		<p>&nbsp;</p>
+		
+		<h2>Special Characters</h2>
+		<p>Special characters are charachters like [] &lt; &gt; {} " " ' ' &amp; ™ © and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the &lt; and &gt; special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like &lt;, &gt; and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
+		<p>Some of the most used ones are:
+			<ul>
+				<li>&amp; - &amp;amp;</li>
+				<li>&lt; - &amp;lt;</li>
+				<li>&gt; - &amp;lt;</li>
+				<li>&commat; - &amp;commat;</li>
+				<li>&trade; - &amp;trade;</li>
+				<li>&copy; - &amp;copy;</li>
+				<li>&reg; - &amp;reg;</li>
+				<li>&num; - &amp;num;</li>
+				<li>&aelig; / &AElig; - &amp;aelig; / &amp;AElig;</li>
+				<li>&oslash; / &Oslash; - &amp;oslash; / &amp;Oslash;</li>
+				<li>&aring; / &Aring; - &amp;aring; / &amp;Aring;</li>
+			</ul>
+		</p>
+		<p><a href="https://dev.w3.org/html5/html-author/charref">List of HTML character entities</a></p>
+		<p><a href="http://unicode.org/charts/">List of unicode character codes for scripts and symbols</a></p>
+
+		<h2>Whitespace</h2>
+		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. To add additional (white) space, you need to use the &amp;nbsp; (non breaking space charachter), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
+		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen lokations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
+
+		<h2>Structuring elements</h2>
+		<p>HTML let us stucture elements based on their meaning, also referred to as semantic. For this we use the sectioning Elements, &lt;h1&gt;-&lt;h6&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, and &lt;section&gt;. We also have the semantic elements, &lt;header&gt; (<em>not to be confused with &lt;head&gt;</em>), &lt;main&gt;, and &lt;footer&gt;.</p>
+
+		<h3>Nav</h3>
+		<p>&nbsp;</p>
+		
+		<h3>Article</h3>
+		<p>&nbsp;</p>
+		
+		<h3>Section</h3>
+		<p>&nbsp;</p>
+		
+		<h3>Aside</h3>
+		<p>&nbsp;</p>
+
+		<h3>Div</h3>
+		<p>&nbsp;</p>
+		
+		<h3>Other elements</h3>
+
+		<h2>Document structure</h2>
+		<p>&nbsp;</p>
+
+		<h3>The header</h3>
+		<p>&nbsp;</p>
+		<h4>Meta Charset</h4>
+		<p>&nbsp;</p>
+		<h4>Meta Content</h4>
+		<p>&nbsp;</p>
+		<h4>Title</h4>
+		<p>&nbsp;</p>
+	
+		<h3>The body</h3>
+		<p>&nbsp;</p>
+
+		<h2>Validation</h2>
+		<p>This page should validate, using the <a href="">W3C Validator</a>. Validation is important, because this makes sure most browsers will read and interpret your code, more or less the same way as you intended. Breaking the standards might also break your pages.</p>
+		
+		
+	</body>
+</html>
