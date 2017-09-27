@@ -2,23 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="Short description of the page...">
+		<meta name="description" content="This HTML page contains some key pointers for making HTML pages.">
 		<title>Basic HTML</title>
 	</head>
 	<body>
-		
 		<!-- This is a comment, it wil not show up on the page in a regular browser, but will be part of the source code, and thus be visible, of sorts, on the web. -->
+        
+		<h1 id="top">HTML 101 - a primer</h1>
 		
-		<h1>HTML 101 - a primer</h1>
+		<p>This HTML page contains some key pointers for making HTML pages.</p>
 		
-		<p>This HTML page contains some pointers for making HTML pages.</p>
-		
-		<h2>Elements</h2>
+		<h2>Elements and tags</h2>
 		
 		<p>HTML is a Markup Language that uses tags to "mark up" your content. 
-		<p>​​An element is the tag and it's content, like &lt;h1&gt;My title&lt;/h1&gt;, here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
+		<p>An element is the tag and it's content, like &lt;h1&gt;My title&lt;/h1&gt;, here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
 		<p>An attribute gives more info or function to the elements (tags), like &lt;h1 lang="en"&gt;My title&lt;/h1&gt;, where the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
-		<p>Nested tags, ie. when you use a tag within a tag, like &lt;body&gt;&lt;h1&gt;My title&lt;/h1&gt;&lt;/body&gt;, make sure child tags are closed before parents. If not, and you try something like &lt;body&gt;&lt;h1&gt;My title&lt;/body&gt;&lt;/h1&gt; you might run into all kinds of trouble.</p>
+		<p>Nested tags are when you use a tag within a tag, like this &lt;body&gt;&lt;h1&gt;My title&lt;/h1&gt;&lt;/body&gt;. Whenever you do this make sure that child tags are closed before parents. If not, and you try to close the body tag before the h1, like this &lt;body&gt;&lt;h1&gt;My title&lt;/body&gt;&lt;/h1&gt;, you might run into all kinds of trouble.</p>
 		
 		<h2>Use Headers for structure, <em>not</em> formatting</h2>
 		
@@ -27,105 +26,333 @@
 		
 		<h2>Paragraphs</h2>
 
-		<p>Use &lt;p&gt; for making paragraph tags on your page. This is the standard body text ("brødtekst") for content on your page, one tag per paragraph ("avsnitt"), and problably - along with &lt;div&gt; perhaps - the most often used tag in HTML.</p>
+		<p>Use &lt;p&gt; for making paragraph tags on your page. This is the standard body text ("brødtekst" in Norwegian) for content on your page, one tag per paragraph ("avsnitt"), and problably - along with &lt;div&gt; perhaps - one of the most often used tags in HTML.</p>
 		
 		<p>Note that even though the closing paragraph tag technically are optional, it's best practice to always include the closing tag, &lt;/p&gt;.</p>
 
 		<h2>Line breaks</h2>
 		<p>Sometimes you don't want a whole new paragraph, but you ned a new line. To do this, you add a line break, with the &lt;br&gt; tag, which do not need a closing tag, like this: <br>This is on a separate line,<br>and this on another new line,<br>and another one, but all are part of the same paragraph.</p>
-		<p>Note that in the xhtml days you had to close all tags, and then some tags were re-defined as selfclosing, and you might find examples of this, with line break tag (and others) looking like this: &lt;br/&gt; or &lt;br /&gt; </p>
+		<p>Note that in the xhtml days you had to close all tags, and then some tags were re-defined as selfclosing, and you might find examples of this, with line break tag (and others) looking like this: &lt;br/&gt; or &lt;br /&gt;.</p>
 		
 		<h2>Emphazising tekst</h2>
 		<p>There are two different ways of emphasizing text, by making it bolder or italic, and HTML contains two ways of doing this, the old, typographical way, and the more modern, semantic way. You can use &lt;b&gt; and &lt;i&gt; to make text <b>bolder</b> or <i>italic</i>; or you can use &lt;strong&gt; and &lt;em&gt; to ephazise the meaning. The <strong>strong tag will display as bold</strong>, while <em>the em tag will use italics</em>, in most browsers; but for instance web readers (uses by disabled and others) will differentiate these.</p>
 		
-		<h2>Links</h2>
-		<p>Links are a integral part of HTML.</p>	
-		
+		<h2 id="links">Links</h2>
+		<p>Links are a integral part of HTML. Hypertext, the HT in HTML, is any text format that uses (hyper-) links to reference more content that the reader can immediately access.</p>	
+        
+        <h3>URL</h3>
+        >>>> EXAMPLES
+        
+        <h3>A</h3>
+        >>>> EXAMPLES
+
+        <h3>Targets</h3>
+        >>>> EXAMPLES
+        
+        <h3>Anchors</h3>
+        <p>With anchors you can and link to special parts of any HTML page that has an unique id attribute. To link to the attribute whit the id="anchorname", you use a link like this:   &lt;a&nbsp;href="http://whatever.test/yourpage.html#anchorname"&gt;. Note the "#" to indicate the id of the anchor. (In earlier versions of HTML anchors relied on the name attribute, and not id, but the name attribute is not officially supported in HTML5.)</p>	
+        <p>Example, this link goes <a href="#top">back to top of page</a></p>	
+        
 		<h2>Lists</h2>
 		
-		<h3>Unrdered lists</h3>	
+		<h3>Unordered lists</h3>	
+        <p>An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with bullets (small black circles) by default:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        
+        <p>Unordered lists can have a type attribute (Note: type is obsolete in HTML5, use CSS: list-style-type) to change the default bullets, with "disc" (default), "circle", "square" or "none": </p>
+        <ul style="list-style-type: circle">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul> 
+
 		<h3>Ordered lists</h3>	
-		<h3>Definition lists</h3>	
+        <p>An ordered list starts with the &lt;ol&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with numbers by default:</p>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+        
+        <p>Ordered lists can display numbers (default), uppercase letters, lower case letters, uppercase roman numbers, lowecase roman numbers and more:</p>
+        <ol  style="list-style-type: lower-roman">
+            <li>Augustus</li>
+            <li>Tiberius</li>
+            <li>Caligula</li>
+            <li>Claudius</li>
+            <li>Nero</li>
+        </ol>
+        <ol style="list-style-type: lower-greek">
+            <li>Alpha</li>
+            <li>Beta</li>
+            <li>Gamma</li>
+            <li>Delta</li>
+        </ol>
+        
+		<h3>Description lists</h3>	
+        <p>The &lt;dl&gt; tag defines a description list, in conjunction with &lt;dt&gt; (defines terms/names) and &lt;dd&gt; (describes each term/name).</p>
+        
+        <dl>
+            <dt>HTML</dt>
+            <dd></dd>
+            <dt>CSS</dt>
+            <dd></dd>
+            <dt>Javascript</dt>
+            <dd></dd>
+        </dl>
+        
+        <p>Note: In HTML 4.01, the &lt;dl> tag defines a definition list, not a description list.</p>
 
 		<h2>Images</h2>
 		<p>Images are placed onto an HTML site using the &lt;img&gt; tag. The image tag is of a kind called replaced content, which means that whenever a browser encounters it, it will stop and replace the tag with whatever it references. To make the reference the image tag has one all important attribute, <em>src</em>, to point to the source file. The other mandatory attribute for images is the <em>alt</em> tag that should be used to describe what's on the photo. There's also a few optional attributes, like target, width and height.</p>
 		<p>The image tag should look like this &lt;img src="path/to/image.kind" alt="Desciption og what's shown on the image"&gt; (note that this is a non closing tag, so you do not need a &lt;/img&gt;).</p>
 		<p>The src attribute points to the image, and usually it will do this relative to the HTML file that includes it, so: If the images are in a folder called "media" on the same level at the HTML file the path is "media/your-image.kind". On more complex setups the path can be longer.</p>
-		<p>So to embed an image after this paragraph we set up en image tag like this:<br> &lt;img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf"&gt;<br>...and it will show up like this:</p>
+		<p>So to embed an image after this paragraph we set up an image tag like this: &lt;img&nbsp;src="media/BringMeAnotherSmurf.jpg"&nbsp;alt="Baby&nbsp;wants&nbsp;another&nbsp;Smurf"&gt; ...and it will show up like so:</p>
 		
-		 <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
+        <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
 		
-		<h3>JPEG</h3>
-		<p>&nbsp;</p>
+        <h3>Common image types</h3>
+        <p>Technically not a part of HTML, it's still useful to know the most common image types used on the web:</p>
+        
+		<h4>JPEG</h4>
+		<p>JPEG (pron. JAY-PEG) is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography. The degree of compression can be adjusted, allowing a selectable tradeoff between storage size and image quality.</p>
 		
-		<h3>Gif and PNG</h3>
-		<p>&nbsp;</p>
+        <h4>GIF</h4>
+		<p>The Graphics Interchange Format, better known by its acronym GIF (pron. JIF <em>or</em> GIF [<a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/gif-inventor-steve-wilhite-says-it-should-be-pronounced-jif-8626882.html" target="_blank">1</a>][<a href="https://www.economist.com/blogs/graphicdetail/2017/06/daily-chart-21" target="_blank">2</a>][<a href="https://gizmodo.com/the-creator-of-the-gif-says-its-pronounced-jif-he-is-509179289" target="_blank">3</a>]) is a bitmap image format that supports up to 8 bits per pixel for each image, allowing a single image to reference its own palette of up to 256 different colors chosen from the 24-bit RGB color space. It also supports animations and allows a separate palette of up to 256 colors for each frame. These palette limitations make GIF less suitable for reproducing color photographs and other images with color gradients, but it is well-suited for simpler images such as graphics or logos with solid areas of color.</p>
+
+        <h4>PNG</h4>
+        <p>Portable Network Graphics, og PNG (pron. PING) is a raster graphics file format that supports lossless data compression. PNG was created as an improved, non-patented replacement for Graphics Interchange Format (GIF), and is the most widely used lossless image compression format on the Internet. PNG supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel for transparency), and full-color non-palette-based RGB/RGBA images (with or without alpha channel).</p>
+
+		<h4>SVG</h4>
+		<p>Scalable Vector Graphics (SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by <a href="https://www.w3.org/" target="_blank">the World Wide Web Consortium (W3C)</a> since 1999.</p>
+        <p>SVG images and their behaviors are defined in XML text files. This means that they can be searched, indexed, scripted, and compressed. As XML files, SVG images can be created and edited with any text editor, as well as with drawing software.</p>
 		
-		<h3>SVG</h3>
-		<p>&nbsp;</p>
-		
-		<h2>Special Characters</h2>
-		<p>Special characters are charachters like [] &lt; &gt; {} " " ' ' &amp; ™ © and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the &lt; and &gt; special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like &lt;, &gt; and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
-		<p>Some of the most used ones are:
-			<ul>
-				<li>&amp; - &amp;amp;</li>
-				<li>&lt; - &amp;lt;</li>
-				<li>&gt; - &amp;lt;</li>
-				<li>&commat; - &amp;commat;</li>
-				<li>&trade; - &amp;trade;</li>
-				<li>&copy; - &amp;copy;</li>
-				<li>&reg; - &amp;reg;</li>
-				<li>&num; - &amp;num;</li>
-				<li>&aelig; / &AElig; - &amp;aelig; / &amp;AElig;</li>
-				<li>&oslash; / &Oslash; - &amp;oslash; / &amp;Oslash;</li>
-				<li>&aring; / &Aring; - &amp;aring; / &amp;Aring;</li>
+		<h2 id="forms">Forms</h2>
+        <p>The &lt;form&gt; tag is used to create an HTML form for user input. The &lt;form&gt; element can contain one or more of the following form elements:</p>
+<ul style="list-style: none">
+<li>&lt;input&gt; specifies an input field where the user can enter data, the default is text, but it there's <a href="https://www.w3schools.com/tags/att_input_type.asp">a wide range of input type attributes</a>.</li> 
+<li>&lt;textarea&gt; defines a multi-line text input control, that can hold an unlimited number of characters</li>
+<li>&lt;button&gt; defines a clickable button, inside of which you can put content, like text or images (giving you more options than the input button type)</li>
+<li>&lt;select&gt; element is used to create a drop-down list</li>
+<li>&lt;option&gt; defines an option in a select list.</li>
+<li>&lt;optgroup&gt; is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user</li>
+<li>&lt;fieldset&gt; is used to group related elements in a form, by drawing a box around the related elements</li>
+<li>&lt;label&gt; defines a label for an input element, and using the for attribute you may reference the input element, making the label clickable</li>
+</ul>
+    <h3>A form example</h3>
+    <form action="#forms" method="get">
+        Select one from the dropdown: 
+        <select name="Option">
+            <option value=0>Select an option</option>
+            <option value="a">Option a</option>
+            <option value="b">Option b</option>        
+        </select><br>
+        <fieldset>
+            <legend>Select one: </legend>
+            <label for="radioa">Cats </label><input type="radio" name="animal" id="radioa" value="cats"> or <label for="radiob">dogs </label><input type="radio" name="animal" id="radiob" value="dogs">
+        </fieldset>
+        <fieldset>
+            <legend>Select any extras for your burger: </legend>
+            <label for="bacon">Bacon</label><input type="checkbox" name="burger" id="bacon" value="bacon">
+            <label for="cheese">Cheese</label><input type="checkbox" name="burger" id="cheese" value="cheese">
+            <label for="tomato">Tomato</label><input type="checkbox" name="burger" id="tomato" value="tomato">
+            <label for="pickled_cucumber">Pickled Cucumber</label><input type="checkbox" name="burger" id="pickled_cucumber" value="pickled_cucumber">
+            <label for="jalapenos">Jalapenos</label><input type="checkbox" name="burger" id="jalapenos" value="jalapenos">
+        </fieldset>
+        <label for="fname">First name: </label><input type="text" name="firstname" id="fname"><br>
+        <label for="lname">Last name: </label><input type="text" name="lastname" id="lname"><br>
+  <input type="submit" value="Submit">
+</form>
+
+        <h2>Special Characters</h2>
+		<p>Special characters are charachters like [] &lt; &gt; {} " " ' ' &amp; &trade; &copy; and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the &lt; and &gt; special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like &lt;, &gt; and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
+		<p>Some of the most used ones are:</p>
+			<ul style="list-style: none">
+				<li>&amp; : &amp;amp;</li>
+				<li>&lt; : &amp;lt;</li>
+				<li>&gt; : &amp;gt;</li>
+				<li>&commat; : &amp;commat;</li>
+				<li>&trade; : &amp;trade;</li>
+				<li>&copy; : &amp;copy;</li>
+				<li>&reg; : &amp;reg;</li>
+				<li>&num; : &amp;num;</li>
+				<li>&aelig; / &AElig; : &amp;aelig; / &amp;AElig;</li>
+				<li>&oslash; / &Oslash; : &amp;oslash; / &amp;Oslash;</li>
+				<li>&aring; / &Aring; : &amp;aring; / &amp;Aring;</li>
 			</ul>
-		</p>
+		
 		<p><a href="https://dev.w3.org/html5/html-author/charref">List of HTML character entities</a></p>
 		<p><a href="http://unicode.org/charts/">List of unicode character codes for scripts and symbols</a></p>
 
-		<h2>Whitespace</h2>
-		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. To add additional (white) space, you need to use the &amp;nbsp; (non breaking space charachter), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
-		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen lokations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
+        <h2>Ymse (miscellaneous)</h2>
 
-		<h2>Structuring elements</h2>
+        <h3>Whitespace</h3>
+		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. (View the page source for this paragraph to see what's going on). To add additional (white) space, you need to use the &amp;nbsp; (non breaking space character), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
+		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
+
+        <h3>Tables</h3>
+        <table>
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+        <h3>ABBR</h3>
+        <abbr title="World Health Organization">WHO</abbr>
+
+        <h3>PRE</h3>
+
+        <h3>Q and blockquote</h3>
+
+        <h3>iframe</h3>
+
+        <h3>Comments</h3>
+        <p>&lt;!-- Comments are (usually) invisible --&gt;</p>
+        
+        <h2>Structuring elements</h2>
 		<p>HTML let us stucture elements based on their meaning, also referred to as semantic. For this we use the sectioning Elements, &lt;h1&gt;-&lt;h6&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, and &lt;section&gt;. We also have the semantic elements, &lt;header&gt; (<em>not to be confused with &lt;head&gt;</em>), &lt;main&gt;, and &lt;footer&gt;.</p>
 
 		<h3>Nav</h3>
-		<p>&nbsp;</p>
+        <p>The &lt;nav&gt; tag defines a set of navigation links. Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &lt;nav&gt; element is intended only for major block of navigation links.</p>
+        <p>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.</p>
 		
 		<h3>Article</h3>
-		<p>&nbsp;</p>
+        <p>The &lt;article&gt; tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
 		
 		<h3>Section</h3>
-		<p>&nbsp;</p>
+		<p>The &lt;section&gt; tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.</p>
 		
 		<h3>Aside</h3>
-		<p>&nbsp;</p>
+        <p>The &lt;aside&gt; tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.</p>
 
-		<h3>Div</h3>
-		<p>&nbsp;</p>
-		
-		<h3>Other elements</h3>
+		<h3>Footer</h3>
+        <p>The &lt;footer&gt; tag defines a footer for a document or section. A &lt;footer&gt; element should contain information about its containing element.</p>
+        <p>A &lt;footer&gt; element typically contains:</p>
+        <ul style="list-style: square">
+                <li>authorship information</li>
+                <li>copyright information</li>
+                <li>contact information</li>
+                <li>sitemap</li>
+                <li>back to top links</li>
+                <li>related documents</li>
+        </ul>
+        
+        <p>You can have several &lt;footer&gt; elements in one document.</p>
+
+        <h3>Div and Span</h3>
+		<p>The &lt;div&gt; tag defines a generic division or a section in an HTML document. The &lt;div&gt; tag is used to group block-elements to format them with CSS.</p>
+        <p>The &lt;span&gt; tag is used to group inline-elements in a document. The &lt;span&gt; tag provides no visual change by itself. The &lt;span&gt; tag provides a way to add a hook to a part of a text or a part of a document.</p>
 
 		<h2>Document structure</h2>
-		<p>&nbsp;</p>
 
-		<h3>The header</h3>
-		<p>&nbsp;</p>
-		<h4>Meta Charset</h4>
-		<p>&nbsp;</p>
-		<h4>Meta Content</h4>
-		<p>&nbsp;</p>
+		<h3>The head</h3>
+        <p>
+The &lt;head&gt; element is a container for all the head elements.
+
+The &lt;head&gt; element can include a title for the document, scripts, styles, meta information, and more.
+
+            The following elements can go inside the &lt;head> element:</p>
+        <ul style="list-style: none">
+            <li>&lt;title&gt; (this element is required in an HTML document)</li>
+            <li>&lt;style&gt;</li>
+            <li>&lt;base&gt;</li>
+            <li>&lt;link&gt;</li>
+            <li>&lt;meta&gt;</li>
+            <li>&lt;script&gt;</li>
+            <li>&lt;noscript&gt;</li>
+        </ul>
+
+
+		<h4>Meta</h4>
+		<p>
+            Metadata is data (information) about data.
+
+The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable.
+
+Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.
+
+The metadata can be used by browsers (how to display content or reload page), search engines, or other web services.
+
+HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the &lt;meta&gt; tag.</p>
+            <ul style="list-style: none">
+            <li>&lt;meta charset="UTF-8"&gt;</li>
+            <li>&lt;meta name="description" content="Short description of this page"&gt;</li>
+            <li>&lt;meta name="author" content="Lasse H&aelig;gland"&gt;</li>
+            <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</li>
+        </ul>
 		<h4>Title</h4>
-		<p>&nbsp;</p>
+<p>The &lt;title&gt; tag is <strong>required</strong> in all HTML documents and it defines the title of the document.
+
+            The &lt;title&gt; element:</p>
+<ul>
+<li>defines a title in the browser toolbar</li>
+<li>provides a title for the page when it is added to favorites</li>
+<li>displays a title for the page in search-engine results</li>
+    </ul>
 	
 		<h3>The body</h3>
-		<p>&nbsp;</p>
+		<p>The &lt;body&gt; tag defines the document's body.
 
+The &lt;body&gt; element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</p>
+
+		<h3>Example of a basic page structure</h3>
+        <pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="description" content="Short description (±140 characthers)"&gt;
+        &lt;title&gt;Page title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;nav&gt;
+           Logo, slogan and navigation menu 
+        &lt;/nav&gt;
+        &lt;article&gt;
+            &lt;h1&gt;Main page title&lt;/h1&gt;
+            Some content
+            &lt;section&gt;
+                &lt;h2&gt;Section title&lt;/h2&gt;
+                Some content
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h2&gt;Section title&lt;/h2&gt;
+                Some content
+            &lt;/section&gt;
+            &lt;aside&gt;
+                Something related to the main content
+            &lt;/aside&gt;
+        &lt;/article&gt;
+        &lt;footer&gt;
+            Contact information, legal stuff, etc.
+        &lt;/footer&gt;  
+    &lt;/body&gt;
+&lt;/html&gt;                 
+        </pre>
+        
 		<h2>Validation</h2>
 		<p>This page should validate, using the <a href="https://validator.w3.org/nu/">W3C Validator</a>. Validation is important, because this makes sure most browsers will read and interpret your code, more or less the same way as you intended. Breaking the standards might also break your pages.</p>
 		
-		
-	</body>
+        <p><a href="#top">Back to top of page</a></p>
+
+		<footer>
+            <hr>
+            <p>Collected by: Lasse H&aelig;gland<br>Contact information: <a href="mailto:lasse.hagland@noroff.no">lasse.hagland@noroff.no</a>.<br>
+            Last updated: 2017-09-27<br>
+            <a href="https://www.noroff.no/">
+                <img src="media/Noroff.png" alt="Noroff logo" title="Noroff">
+            </a></p>
+        </footer>
+
+    </body>
 </html>
