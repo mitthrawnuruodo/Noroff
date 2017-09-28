@@ -3,17 +3,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="This HTML page contains some key pointers for making HTML pages.">
+        <meta name="author" content="Lasse Hægland">
 		<title>Basic HTML</title>
 	</head>
 	<body>
 		<!-- This is a comment, it wil not show up on the page in a regular browser, but will be part of the source code, and thus be visible, of sorts, on the web. -->
-        
-		<h1 id="top">HTML 101 - a primer</h1>
+
+        <h1 id="top">HTML 101 - a primer</h1>
 		
-		<p>This HTML page contains some key pointers for making HTML pages.</p>
+		<p>This HTML page contains some key pointers for making HTML pages. As an added bonus, the file itself can be used as a reference, as it's (almost) pure HTML.</p>
 		
 		<h2>Elements and tags</h2>
-		
 		<p>HTML is a Markup Language that uses <strong>tags</strong> to "mark up" your content. 
         <p>An <strong>element</strong> is the tag and it's content, like this:</p> 
         <pre>
@@ -226,8 +226,8 @@
 		<p>Some of the most used ones are:</p>
 			<ul style="list-style: none">
 				<li>&amp; : &amp;amp;</li>
-				<li><code>&lt; : &amp;lt;</li>
-				<li>&gt;</code> : &amp;gt;</li>
+				<li>&lt; : &amp;lt;</li>
+				<li>&gt; : &amp;gt;</li>
 				<li>&commat; : &amp;commat;</li>
 				<li>&trade; : &amp;trade;</li>
 				<li>&copy; : &amp;copy;</li>
@@ -269,7 +269,7 @@
         }
         </style>
 -->
-<!-- Note: Inline style tags, like the example above, are no longer allowed. Kept here only to demonstrate how tables may be styled! -->
+<!-- Note: Inline style tags, like the example above, are no longer allowed. Kept here only to demonstrate how tables may be styled. Uncomment the style block above to add style to the table below. -->
         <table>
             <caption>Monthly savings</caption>
             <tr>
@@ -278,27 +278,28 @@
             </tr>
             <tr>
                 <td>January</td>
-                <td>$100</td>
+                <td>NOK 1000</td>
             </tr>
             <tr>
                 <td>February</td>
-                <td>$80</td>
+                <td>NOK 800</td>
             </tr>
             <tr>
                 <td>March</td>
-                <td>$10</td>
+                <td>NOK 100</td>
             </tr>
             <tr>
                 <td>February</td>
-                <td>$75</td>
+                <td>NOK 750</td>
             </tr>
         </table>
 
         <h3>ABBR</h3>
-        Mouse over the dotted abbrivations, to see what they abbriviate: <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.
+        <p>>>>>>>>>></p>
+        <p>Mouse over the dotted abbrivations, to see what they abbriviate: <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
 
         <h3>PRE</h3>
-        <p>Poems and code...
+        <p>>>>>>>>>>> Poems and code...
         Block element <code>&lt;pre&gt;</code> <code>&lt;/pre&gt;</code>
         
         Inline: <code>&lt;code&gt;</code> <code>&lt;/code&gt;</code></p>
@@ -310,11 +311,11 @@
         <blockquote>quotations are good</blockquote>
         <p>If you quote another web page, it's best practice to use the cite attribute for the <code>&lt;blockquote&gt;</code> element to refrence the origin:</p>
         <pre>
-<code>&lt;blockquote cite="https://en.wikipedia.org/wiki/Dill"&gt;</code>
+<code>&lt;blockquote cite="https://en.wikipedia.org/wiki/Dill"&gt;
     Dill (Anethum graveolens) is an annual herb in the celery family Apiaceae. 
     It is the only species in the genus Anethum. Dill is widely grown in 
     Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.
-<code>&lt;/blockquote&gt;</code> 
+&lt;/blockquote&gt;</code> 
         </pre>
         <p>The cite URL is not visible on the page (but your browser knows):</p>
         <blockquote cite="https://en.wikipedia.org/wiki/Dill">
