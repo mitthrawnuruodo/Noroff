@@ -139,7 +139,7 @@
         
         <p>It can also be scaled using the width and height attributes (here is widht set to 256 pixels):</p>
         
-        <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf" width="256px">
+        <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf" width="256">
         
         <p>You can also set image widths with CSS.</p>
         <p><strong>Note</strong>: While most images will scale down gracefully, very few (with the exeptions of SVGs will scale up, so be very careful about setting the width/height to more than the original image. Also, if you set both width and height, make sure you retain the same aspect ratio to protect the image propotions.</p>
@@ -251,6 +251,7 @@
 		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
 
         <h3>Tables</h3>
+<!--
         <style>
         table {
             font-family: arial, sans-serif;
@@ -267,6 +268,8 @@
             background-color: #dddddd;
         }
         </style>
+-->
+<!-- Note: Inline style tags, like the example above, are no longer allowed. Kept here only to demonstrate how tables may be styled! -->
         <table>
             <caption>Monthly savings</caption>
             <tr>
@@ -292,7 +295,7 @@
         </table>
 
         <h3>ABBR</h3>
-        <abbr title="World Health Organization">WHO</abbr>
+        Mouse over the dotted abbrivations, to see what they abbriviate: <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.
 
         <h3>PRE</h3>
         <p>Poems and code...
@@ -301,7 +304,26 @@
         Inline: &lt;code&gt; &lt;/code&gt;</p>
 
         <h3>Q and Blockquote</h3>
-
+        <p>Both &lt;q&gt; and &lt;blockquote&gt; are used for quotations. The &lt;q&gt; tag defines a short quotation, while the &lt;blockquote&gt; tag specifies a section that is quoted from another source.</p>
+        <p>The &lt;q&gt; tag is an inline tag, and they'll look like this <q>quotations are good</q> by default.</p>
+        <p>The &lt;blockquote&gt; tag, on the other hand, is a block type and will display on a new line, by default:</p>
+        <blockquote>quotations are good</blockquote>
+        <p>If you quote another web page, it's best practice to use the cite attribute for the &lt;blockquote&gt; element to refrence the origin:</p>
+        <pre>
+&lt;blockquote cite="https://en.wikipedia.org/wiki/Dill"&gt;
+    Dill (Anethum graveolens) is an annual herb in the celery family Apiaceae. 
+    It is the only species in the genus Anethum. Dill is widely grown in 
+    Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.
+&lt;/blockquote&gt; 
+        </pre>
+        <p>The cite URL is not visible on the page (but your browser knows):</p>
+        <blockquote cite="https://en.wikipedia.org/wiki/Dill">
+            Dill (Anethum graveolens) is an annual herb in the celery family Apiaceae. 
+            It is the only species in the genus Anethum. Dill is widely grown in 
+            Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.
+        </blockquote>
+        
+        
         <h3>iframe</h3>
 
         <h3>Comments</h3>
