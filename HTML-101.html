@@ -14,15 +14,39 @@
 		
 		<h2>Elements and tags</h2>
 		
-		<p>HTML is a Markup Language that uses tags to "mark up" your content. 
-		<p>An element is the tag and it's content, like &lt;h1&gt;My title&lt;/h1&gt;, here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
-		<p>An attribute gives more info or function to the elements (tags), like &lt;h1 lang="en"&gt;My title&lt;/h1&gt;, where the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
-		<p>Nested tags are when you use a tag within a tag, like this &lt;body&gt;&lt;h1&gt;My title&lt;/h1&gt;&lt;/body&gt;. Whenever you do this make sure that child tags are closed before parents. If not, and you try to close the body tag before the h1, like this &lt;body&gt;&lt;h1&gt;My title&lt;/body&gt;&lt;/h1&gt;, you might run into all kinds of trouble.</p>
+		<p>HTML is a Markup Language that uses <strong>tags</strong> to "mark up" your content. 
+        <p>An <strong>element</strong> is the tag and it's content, like this:</p> 
+        <pre>
+        &lt;h1&gt;My title&lt;/h1&gt;
+        </pre>
+        <p>Here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
+        <h3>Attribute</h3>
+        <p>An <strong>attribute</strong> gives more info or function to the elements (tags), like this:</p>
+        <pre>
+        &lt;h1 lang="en"&gt;My title&lt;/h1&gt;
+        </pre>
+        <p>Here the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
+        <h3>Nested tags</h3>
+		<p>Nested tags are when you use a tag within a tag, like this, where the &lt;h1&gt; is nested within the &lt;body&gt;: 
+        <pre>
+        &lt;body&gt;
+            &lt;h1&gt;My title&lt;/h1&gt;
+        &lt;/body&gt;
+        </pre>
+        <p>Whenever you do this make sure that child tags are closed before parents. If not, and you try to close the body tag before the h1, you will get in all sorts of problems; so <strong>don't do</strong> this:</p> 
+        <pre style="color: red">
+        &lt;body&gt;
+            &lt;h1&gt;My title
+        &lt;/body&gt;
+        &lt;/h1&gt;
+        </pre>
 		
-		<h2>Use Headers for structure, <em>not</em> formatting</h2>
-		
-		<p>There should only be one &lt;h1&gt; tag on each page; or, more spesifically, only one per equal important section on the page, for multi-section pages.</p>
-		<p>Then use &lt;h2&gt; for the next level, &lt;h3&gt; for the next, and so on (until &lt;h6&gt; if needed). This establishes a semantic structure (content hierarchy) for the content on your page. Use style/stylesheets to format the headings, if needed, as you do with all other content on your page (ie. if you want the h3 to be larger, do not substitute it with a h2 just because that is bigger by default).</p>
+		<h2>Headings</h2>
+		<p>Headings are important in HTML documents. There should only be one &lt;h1&gt; tag on each page; or, more spesifically, only one per equal important section on the page, for multi-section pages.</p>
+		<p>Then use &lt;h2&gt; for the next level, &lt;h3&gt; for the next, and so on (until &lt;h6&gt; if needed). This establishes a semantic structure (content hierarchy) for the content on your page.</p> 
+            
+        <h3>Use Headers for structure, <em>not</em> formatting</h3>
+        <p>Don't use headings to make text BIG or bold. Use style/stylesheets to format the headings, if needed, as you do with all other content on your page (ie. if you want the h3 to be larger, do not substitute it with a h2 just because that is bigger by default).</p>
 		
 		<h2>Paragraphs</h2>
 
@@ -98,22 +122,28 @@
         
         <dl>
             <dt>HTML</dt>
-            <dd></dd>
+            <dd>Hypertext Markup Language is the standard markup language for creating web pages and web applications</dd>
             <dt>CSS</dt>
-            <dd></dd>
-            <dt>Javascript</dt>
-            <dd></dd>
+            <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language.</dd>
+            <dt>JavaScript</dt>
+            <dd>JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, object-based, multi-paradigm, and interpreted programming language.</dd>
         </dl>
-        
-        <p>Note: In HTML 4.01, the &lt;dl> tag defines a definition list, not a description list.</p>
-
+            
 		<h2>Images</h2>
 		<p>Images are placed onto an HTML site using the &lt;img&gt; tag. The image tag is of a kind called replaced content, which means that whenever a browser encounters it, it will stop and replace the tag with whatever it references. To make the reference the image tag has one all important attribute, <em>src</em>, to point to the source file. The other mandatory attribute for images is the <em>alt</em> tag that should be used to describe what's on the photo. There's also a few optional attributes, like target, width and height.</p>
 		<p>The image tag should look like this &lt;img src="path/to/image.kind" alt="Desciption og what's shown on the image"&gt; (note that this is a non closing tag, so you do not need a &lt;/img&gt;).</p>
 		<p>The src attribute points to the image, and usually it will do this relative to the HTML file that includes it, so: If the images are in a folder called "media" on the same level at the HTML file the path is "media/your-image.kind". On more complex setups the path can be longer.</p>
-		<p>So to embed an image after this paragraph we set up an image tag like this: &lt;img&nbsp;src="media/BringMeAnotherSmurf.jpg"&nbsp;alt="Baby&nbsp;wants&nbsp;another&nbsp;Smurf"&gt; ...and it will show up like so:</p>
+		<p>So to embed an image after this paragraph we set up an image tag like this: &lt;img&nbsp;src="media/BringMeAnotherSmurf.jpg"&nbsp;alt="Baby&nbsp;wants&nbsp;another&nbsp;Smurf"&gt; ...and it will show up like so in its original size:</p>
 		
         <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
+        
+        <p>It can also be scaled using the width and height attributes (here is widht set to 256 pixels):</p>
+        
+        <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf" width="256px">
+        
+        <p>You can also set image widths with CSS.</p>
+        <p><strong>Note</strong>: While most images will scale down gracefully, very few (with the exeptions of SVGs will scale up, so be very careful about setting the width/height to more than the original image. Also, if you set both width and height, make sure you retain the same aspect ratio to protect the image propotions.</p>
+
 		
         <h3>Common image types</h3>
         <p>Technically not a part of HTML, it's still useful to know the most common image types used on the web:</p>
@@ -133,41 +163,64 @@
 		
 		<h2 id="forms">Forms</h2>
         <p>The &lt;form&gt; tag is used to create an HTML form for user input. The &lt;form&gt; element can contain one or more of the following form elements:</p>
-<ul style="list-style: none">
-<li>&lt;input&gt; specifies an input field where the user can enter data, the default is text, but it there's <a href="https://www.w3schools.com/tags/att_input_type.asp">a wide range of input type attributes</a>.</li> 
-<li>&lt;textarea&gt; defines a multi-line text input control, that can hold an unlimited number of characters</li>
-<li>&lt;button&gt; defines a clickable button, inside of which you can put content, like text or images (giving you more options than the input button type)</li>
-<li>&lt;select&gt; element is used to create a drop-down list</li>
-<li>&lt;option&gt; defines an option in a select list.</li>
-<li>&lt;optgroup&gt; is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user</li>
-<li>&lt;fieldset&gt; is used to group related elements in a form, by drawing a box around the related elements</li>
-<li>&lt;label&gt; defines a label for an input element, and using the for attribute you may reference the input element, making the label clickable</li>
-</ul>
-    <h3>A form example</h3>
-    <form action="#forms" method="get">
-        Select one from the dropdown: 
-        <select name="Option">
-            <option value=0>Select an option</option>
-            <option value="a">Option a</option>
-            <option value="b">Option b</option>        
-        </select><br>
-        <fieldset>
-            <legend>Select one: </legend>
-            <label for="radioa">Cats </label><input type="radio" name="animal" id="radioa" value="cats"> or <label for="radiob">dogs </label><input type="radio" name="animal" id="radiob" value="dogs">
-        </fieldset>
-        <fieldset>
-            <legend>Select any extras for your burger: </legend>
-            <label for="bacon">Bacon</label><input type="checkbox" name="burger" id="bacon" value="bacon">
-            <label for="cheese">Cheese</label><input type="checkbox" name="burger" id="cheese" value="cheese">
-            <label for="tomato">Tomato</label><input type="checkbox" name="burger" id="tomato" value="tomato">
-            <label for="pickled_cucumber">Pickled Cucumber</label><input type="checkbox" name="burger" id="pickled_cucumber" value="pickled_cucumber">
-            <label for="jalapenos">Jalapenos</label><input type="checkbox" name="burger" id="jalapenos" value="jalapenos">
-        </fieldset>
-        <label for="fname">First name: </label><input type="text" name="firstname" id="fname"><br>
-        <label for="lname">Last name: </label><input type="text" name="lastname" id="lname"><br>
-  <input type="submit" value="Submit">
-</form>
+        <ul style="list-style: none">
+        <li>&lt;input&gt; specifies an input field where the user can enter data, the default is text, but it there's <a href="https://www.w3schools.com/tags/att_input_type.asp">a wide range of input type attributes</a>.</li> 
+        <li>&lt;textarea&gt; defines a multi-line text input control, that can hold an unlimited number of characters</li>
+        <li>&lt;button&gt; defines a clickable button, inside of which you can put content, like text or images (giving you more options than the input button type)</li>
+        <li>&lt;select&gt; element is used to create a drop-down list</li>
+        <li>&lt;option&gt; defines an option in a select list.</li>
+        <li>&lt;optgroup&gt; is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user</li>
+        <li>&lt;fieldset&gt; is used to group related elements in a form, by drawing a box around the related elements</li>
+        <li>&lt;label&gt; defines a label for an input element, and using the for attribute you may reference the input element, making the label clickable</li>
+        </ul>
 
+        <h3>A form example</h3>
+        <form action="#forms" method="get">
+            Select one from the dropdown: 
+            <select name="Option">
+                <option value=0>Select an option</option>
+                <option value="a">Option a</option>
+                <option value="b">Option b</option>        
+            </select><br>
+            <fieldset>
+                <legend>Select one: </legend>
+                <label for="radioa">Cats </label><input type="radio" name="animal" id="radioa" value="cats"> or <label for="radiob">dogs </label><input type="radio" name="animal" id="radiob" value="dogs">
+            </fieldset>
+            <fieldset>
+                <legend>Select any extras for your burger: </legend>
+                <label for="bacon">Bacon</label><input type="checkbox" name="burger" id="bacon" value="bacon">
+                <label for="cheese">Cheese</label><input type="checkbox" name="burger" id="cheese" value="cheese">
+                <label for="tomato">Tomato</label><input type="checkbox" name="burger" id="tomato" value="tomato">
+                <label for="pickled_cucumber">Pickled Cucumber</label><input type="checkbox" name="burger" id="pickled_cucumber" value="pickled_cucumber">
+                <label for="jalapenos">Jalapenos</label><input type="checkbox" name="burger" id="jalapenos" value="jalapenos">
+            </fieldset>
+            <label for="fname">First name: </label><input type="text" name="firstname" id="fname"><br>
+            <label for="lname">Last name: </label><input type="text" name="lastname" id="lname"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <h2>HTML Block and Inline Elements</h2>
+        
+        <h3>Block-level Elements</h3>
+        <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+        <div style="border: 1px solid gray;">This &lt;div&gt; element is a block-level element.</div>
+        <p>Examples of block-level elements:</p>
+        <ul style="list-style: none">
+            <li>&lt;div&gt;</li>
+            <li>&lt;h1&gt; - &lt;h6&gt;</li>
+            <li>&lt;p&gt;</li>
+            <li>&lt;form&gt;</li>
+        </ul>
+        
+        <h3>Inline Elements</h3>
+        <p>An inline element does not start on a new line and only takes up as much width as necessary. <span style="border: 1px solid gray;">This is an inline &lt;span&gt; element inside a paragraph.</span> Examples of inline elements:</p>
+        <ul style="list-style: none">
+            <li>&lt;span&gt;</li>
+            <li>&lt;a&gt;</li>
+            <li>&lt;img&gt;</li>    
+        </ul>
+        
         <h2>Special Characters</h2>
 		<p>Special characters are charachters like [] &lt; &gt; {} " " ' ' &amp; &trade; &copy; and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the &lt; and &gt; special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like &lt;, &gt; and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
 		<p>Some of the most used ones are:</p>
@@ -187,6 +240,9 @@
 		
 		<p><a href="https://dev.w3.org/html5/html-author/charref">List of HTML character entities</a></p>
 		<p><a href="http://unicode.org/charts/">List of unicode character codes for scripts and symbols</a></p>
+        
+        <h2>Style</h2>
+        <p>>>>>>>>>  Inline style > External and internal style sheets (order matters) > Browser defaults</p>
 
         <h2>Ymse (miscellaneous)</h2>
 
@@ -195,24 +251,56 @@
 		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
 
         <h3>Tables</h3>
+        <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        </style>
         <table>
-  <caption>Monthly savings</caption>
-  <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
-  </tr>
-</table>
+            <caption>Monthly savings</caption>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$75</td>
+            </tr>
+        </table>
 
         <h3>ABBR</h3>
         <abbr title="World Health Organization">WHO</abbr>
 
         <h3>PRE</h3>
+        <p>Poems and code...
+        Block element &lt;pre&gt; &lt;/pre&gt;
+        
+        Inline: &lt;code&gt; &lt;/code&gt;</p>
 
-        <h3>Q and blockquote</h3>
+        <h3>Q and Blockquote</h3>
 
         <h3>iframe</h3>
 
@@ -256,12 +344,7 @@
 		<h2>Document structure</h2>
 
 		<h3>The head</h3>
-        <p>
-The &lt;head&gt; element is a container for all the head elements.
-
-The &lt;head&gt; element can include a title for the document, scripts, styles, meta information, and more.
-
-            The following elements can go inside the &lt;head> element:</p>
+        <p>The &lt;head&gt; element is a container for all the head elements. It can include a title for the document, scripts, styles, meta information, and more. The following elements can go inside the &lt;head&gt; element:</p>
         <ul style="list-style: none">
             <li>&lt;title&gt; (this element is required in an HTML document)</li>
             <li>&lt;style&gt;</li>
@@ -272,38 +355,24 @@ The &lt;head&gt; element can include a title for the document, scripts, styles, 
             <li>&lt;noscript&gt;</li>
         </ul>
 
-
 		<h4>Meta</h4>
-		<p>
-            Metadata is data (information) about data.
-
-The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable.
-
-Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.
-
-The metadata can be used by browsers (how to display content or reload page), search engines, or other web services.
-
-HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the &lt;meta&gt; tag.</p>
-            <ul style="list-style: none">
+		<p>Metadata is data (information) about data. The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines, or other web services. HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the &lt;meta&gt; tag.</p>
+        <ul style="list-style: none">
             <li>&lt;meta charset="UTF-8"&gt;</li>
             <li>&lt;meta name="description" content="Short description of this page"&gt;</li>
             <li>&lt;meta name="author" content="Lasse H&aelig;gland"&gt;</li>
             <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</li>
         </ul>
 		<h4>Title</h4>
-<p>The &lt;title&gt; tag is <strong>required</strong> in all HTML documents and it defines the title of the document.
-
-            The &lt;title&gt; element:</p>
-<ul>
-<li>defines a title in the browser toolbar</li>
-<li>provides a title for the page when it is added to favorites</li>
-<li>displays a title for the page in search-engine results</li>
-    </ul>
+        <p>The &lt;title&gt; tag is <strong>required</strong> in all HTML documents and it defines the title of the document. The &lt;title&gt; element:</p>
+        <ul>
+            <li>defines a title in the browser toolbar</li>
+            <li>provides a title for the page when it is added to favorites</li>
+            <li>displays a title for the page in search-engine results</li>
+        </ul>
 	
 		<h3>The body</h3>
-		<p>The &lt;body&gt; tag defines the document's body.
-
-The &lt;body&gt; element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</p>
+		<p>The &lt;body&gt; tag defines the document's body. The &lt;body&gt; element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</p>
 
 		<h3>Example of a basic page structure</h3>
         <pre>
