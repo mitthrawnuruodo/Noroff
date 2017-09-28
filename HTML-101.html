@@ -17,49 +17,49 @@
 		<p>HTML is a Markup Language that uses <strong>tags</strong> to "mark up" your content. 
         <p>An <strong>element</strong> is the tag and it's content, like this:</p> 
         <pre>
-        &lt;h1&gt;My title&lt;/h1&gt;
+        <code>&lt;h1&gt;My title&lt;/h1&gt;</code>
         </pre>
-        <p>Here &lt;h1&gt; is the tag (with &lt;/h1&gt; as the closing tag), and "My title" is the content.</p>
+        <p>Here <code>&lt;h1&gt;</code> is the tag (with <code>&lt;/h1&gt;</code> as the closing tag), and "My title" is the content.</p>
         <h3>Attribute</h3>
         <p>An <strong>attribute</strong> gives more info or function to the elements (tags), like this:</p>
         <pre>
-        &lt;h1 lang="en"&gt;My title&lt;/h1&gt;
+        <code>&lt;h1 lang="en"&gt;My title&lt;/h1&gt;</code>
         </pre>
         <p>Here the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
         <h3>Nested tags</h3>
-		<p>Nested tags are when you use a tag within a tag, like this, where the &lt;h1&gt; is nested within the &lt;body&gt;: 
+		<p>Nested tags are when you use a tag within a tag, like this, where the <code>&lt;h1&gt;</code> is nested within the <code>&lt;body&gt;</code>: 
         <pre>
-        &lt;body&gt;
-            &lt;h1&gt;My title&lt;/h1&gt;
-        &lt;/body&gt;
+        <code>&lt;body&gt;</code>
+            <code>&lt;h1&gt;</code>My title<code>&lt;/h1&gt;</code>
+        <code>&lt;/body&gt;</code>
         </pre>
         <p>Whenever you do this make sure that child tags are closed before parents. If not, and you try to close the body tag before the h1, you will get in all sorts of problems; so <strong>don't do</strong> this:</p> 
         <pre style="color: red">
-        &lt;body&gt;
-            &lt;h1&gt;My title
-        &lt;/body&gt;
-        &lt;/h1&gt;
+        <code>&lt;body&gt;</code>
+            <code>&lt;h1&gt;</code>My title
+        <code>&lt;/body&gt;</code>
+        <code>&lt;/h1&gt;</code>
         </pre>
 		
 		<h2>Headings</h2>
-		<p>Headings are important in HTML documents. There should only be one &lt;h1&gt; tag on each page; or, more spesifically, only one per equal important section on the page, for multi-section pages.</p>
-		<p>Then use &lt;h2&gt; for the next level, &lt;h3&gt; for the next, and so on (until &lt;h6&gt; if needed). This establishes a semantic structure (content hierarchy) for the content on your page.</p> 
+		<p>Headings are important in HTML documents. There should only be one <code>&lt;h1&gt;</code> tag on each page; or, more spesifically, only one per equal important section on the page, for multi-section pages.</p>
+		<p>Then use <code>&lt;h2&gt;</code> for the next level, <code>&lt;h3&gt;</code> for the next, and so on (until <code>&lt;h6&gt;</code> if needed). This establishes a semantic structure (content hierarchy) for the content on your page.</p> 
             
         <h3>Use Headers for structure, <em>not</em> formatting</h3>
         <p>Don't use headings to make text BIG or bold. Use style/stylesheets to format the headings, if needed, as you do with all other content on your page (ie. if you want the h3 to be larger, do not substitute it with a h2 just because that is bigger by default).</p>
 		
 		<h2>Paragraphs</h2>
 
-		<p>Use &lt;p&gt; for making paragraph tags on your page. This is the standard body text ("brødtekst" in Norwegian) for content on your page, one tag per paragraph ("avsnitt"), and problably - along with &lt;div&gt; perhaps - one of the most often used tags in HTML.</p>
+		<p>Use <code>&lt;p&gt;</code> for making paragraph tags on your page. This is the standard body text ("brødtekst" in Norwegian) for content on your page, one tag per paragraph ("avsnitt"), and problably - along with <code>&lt;div&gt;</code> perhaps - one of the most often used tags in HTML.</p>
 		
-		<p>Note that even though the closing paragraph tag technically are optional, it's best practice to always include the closing tag, &lt;/p&gt;.</p>
+		<p>Note that even though the closing paragraph tag technically are optional, it's best practice to always include the closing tag, <code>&lt;/p&gt;</code>.</p>
 
 		<h2>Line breaks</h2>
-		<p>Sometimes you don't want a whole new paragraph, but you ned a new line. To do this, you add a line break, with the &lt;br&gt; tag, which do not need a closing tag, like this: <br>This is on a separate line,<br>and this on another new line,<br>and another one, but all are part of the same paragraph.</p>
-		<p>Note that in the xhtml days you had to close all tags, and then some tags were re-defined as selfclosing, and you might find examples of this, with line break tag (and others) looking like this: &lt;br/&gt; or &lt;br /&gt;.</p>
+		<p>Sometimes you don't want a whole new paragraph, but you ned a new line. To do this, you add a line break, with the <code>&lt;br&gt;</code> tag, which do not need a closing tag, like this: <br>This is on a separate line,<br>and this on another new line,<br>and another one, but all are part of the same paragraph.</p>
+		<p>Note that in the xhtml days you had to close all tags, and then some tags were re-defined as selfclosing, and you might find examples of this, with line break tag (and others) looking like this: <code>&lt;br/&gt;</code> or <code>&lt;br /&gt;</code>.</p>
 		
 		<h2>Emphazising tekst</h2>
-		<p>There are two different ways of emphasizing text, by making it bolder or italic, and HTML contains two ways of doing this, the old, typographical way, and the more modern, semantic way. You can use &lt;b&gt; and &lt;i&gt; to make text <b>bolder</b> or <i>italic</i>; or you can use &lt;strong&gt; and &lt;em&gt; to ephazise the meaning. The <strong>strong tag will display as bold</strong>, while <em>the em tag will use italics</em>, in most browsers; but for instance web readers (uses by disabled and others) will differentiate these.</p>
+		<p>There are two different ways of emphasizing text, by making it bolder or italic, and HTML contains two ways of doing this, the old, typographical way, and the more modern, semantic way. You can use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> to make text <b>bolder</b> or <i>italic</i>; or you can use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> to ephazise the meaning. The <strong>strong tag will display as bold</strong>, while <em>the em tag will use italics</em>, in most browsers; but for instance web readers (uses by disabled and others) will differentiate these.</p>
 		
 		<h2 id="links">Links</h2>
 		<p>Links are a integral part of HTML. Hypertext, the HT in HTML, is any text format that uses (hyper-) links to reference more content that the reader can immediately access.</p>	
@@ -74,13 +74,13 @@
         >>>> EXAMPLES
         
         <h3>Anchors</h3>
-        <p>With anchors you can and link to special parts of any HTML page that has an unique id attribute. To link to the attribute whit the id="anchorname", you use a link like this:   &lt;a&nbsp;href="http://whatever.test/yourpage.html#anchorname"&gt;. Note the "#" to indicate the id of the anchor. (In earlier versions of HTML anchors relied on the name attribute, and not id, but the name attribute is not officially supported in HTML5.)</p>	
+        <p>With anchors you can and link to special parts of any HTML page that has an unique id attribute. To link to the attribute whit the id="anchorname", you use a link like this:   <code>&lt;a&nbsp;href="http://whatever.test/yourpage.html#anchorname"&gt;</code>. Note the "#" to indicate the id of the anchor. (In earlier versions of HTML anchors relied on the name attribute, and not id, but the name attribute is not officially supported in HTML5.)</p>	
         <p>Example, this link goes <a href="#top">back to top of page</a></p>	
         
 		<h2>Lists</h2>
 		
 		<h3>Unordered lists</h3>	
-        <p>An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with bullets (small black circles) by default:</p>
+        <p>An unordered list starts with the <code>&lt;ul&gt;</code> tag. Each list item starts with the <code>&lt;li&gt;</code> tag. The list items will be marked with bullets (small black circles) by default:</p>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -95,7 +95,7 @@
         </ul> 
 
 		<h3>Ordered lists</h3>	
-        <p>An ordered list starts with the &lt;ol&gt; tag. Each list item starts with the &lt;li&gt; tag. The list items will be marked with numbers by default:</p>
+        <p>An ordered list starts with the <code>&lt;ol&gt;</code> tag. Each list item starts with the <code>&lt;li&gt;</code> tag. The list items will be marked with numbers by default:</p>
         <ol>
             <li>HTML</li>
             <li>CSS</li>
@@ -118,7 +118,7 @@
         </ol>
         
 		<h3>Description lists</h3>	
-        <p>The &lt;dl&gt; tag defines a description list, in conjunction with &lt;dt&gt; (defines terms/names) and &lt;dd&gt; (describes each term/name).</p>
+        <p>The <code>&lt;dl&gt;</code> tag defines a description list, in conjunction with <code>&lt;dt&gt;</code> (defines terms/names) and <code>&lt;dd&gt;</code> (describes each term/name).</p>
         
         <dl>
             <dt>HTML</dt>
@@ -130,10 +130,10 @@
         </dl>
             
 		<h2>Images</h2>
-		<p>Images are placed onto an HTML site using the &lt;img&gt; tag. The image tag is of a kind called replaced content, which means that whenever a browser encounters it, it will stop and replace the tag with whatever it references. To make the reference the image tag has one all important attribute, <em>src</em>, to point to the source file. The other mandatory attribute for images is the <em>alt</em> tag that should be used to describe what's on the photo. There's also a few optional attributes, like target, width and height.</p>
-		<p>The image tag should look like this &lt;img src="path/to/image.kind" alt="Desciption og what's shown on the image"&gt; (note that this is a non closing tag, so you do not need a &lt;/img&gt;).</p>
+		<p>Images are placed onto an HTML site using the <code>&lt;img&gt;</code> tag. The image tag is of a kind called replaced content, which means that whenever a browser encounters it, it will stop and replace the tag with whatever it references. To make the reference the image tag has one all important attribute, <em>src</em>, to point to the source file. The other mandatory attribute for images is the <em>alt</em> tag that should be used to describe what's on the photo. There's also a few optional attributes, like target, width and height.</p>
+		<p>The image tag should look like this <code>&lt;img src="path/to/image.kind" alt="Desciption og what's shown on the image"&gt;</code> (note that this is a non closing tag, so you do not need a <code>&lt;/img&gt;</code>).</p>
 		<p>The src attribute points to the image, and usually it will do this relative to the HTML file that includes it, so: If the images are in a folder called "media" on the same level at the HTML file the path is "media/your-image.kind". On more complex setups the path can be longer.</p>
-		<p>So to embed an image after this paragraph we set up an image tag like this: &lt;img&nbsp;src="media/BringMeAnotherSmurf.jpg"&nbsp;alt="Baby&nbsp;wants&nbsp;another&nbsp;Smurf"&gt; ...and it will show up like so in its original size:</p>
+		<p>So to embed an image after this paragraph we set up an image tag like this: <code>&lt;img&nbsp;src="media/BringMeAnotherSmurf.jpg"&nbsp;alt="Baby&nbsp;wants&nbsp;another&nbsp;Smurf"&gt;</code> ...and it will show up like so in its original size:</p>
 		
         <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
         
@@ -162,16 +162,16 @@
         <p>SVG images and their behaviors are defined in XML text files. This means that they can be searched, indexed, scripted, and compressed. As XML files, SVG images can be created and edited with any text editor, as well as with drawing software.</p>
 		
 		<h2 id="forms">Forms</h2>
-        <p>The &lt;form&gt; tag is used to create an HTML form for user input. The &lt;form&gt; element can contain one or more of the following form elements:</p>
+        <p>The <code>&lt;form&gt;</code> tag is used to create an HTML form for user input. The <code>&lt;form&gt;</code> element can contain one or more of the following form elements:</p>
         <ul style="list-style: none">
-        <li>&lt;input&gt; specifies an input field where the user can enter data, the default is text, but it there's <a href="https://www.w3schools.com/tags/att_input_type.asp">a wide range of input type attributes</a>.</li> 
-        <li>&lt;textarea&gt; defines a multi-line text input control, that can hold an unlimited number of characters</li>
-        <li>&lt;button&gt; defines a clickable button, inside of which you can put content, like text or images (giving you more options than the input button type)</li>
-        <li>&lt;select&gt; element is used to create a drop-down list</li>
-        <li>&lt;option&gt; defines an option in a select list.</li>
-        <li>&lt;optgroup&gt; is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user</li>
-        <li>&lt;fieldset&gt; is used to group related elements in a form, by drawing a box around the related elements</li>
-        <li>&lt;label&gt; defines a label for an input element, and using the for attribute you may reference the input element, making the label clickable</li>
+        <li><code>&lt;input&gt;</code> specifies an input field where the user can enter data, the default is text, but it there's <a href="https://www.w3schools.com/tags/att_input_type.asp">a wide range of input type attributes</a>.</li> 
+        <li><code>&lt;textarea&gt;</code> defines a multi-line text input control, that can hold an unlimited number of characters</li>
+        <li><code>&lt;button&gt;</code> defines a clickable button, inside of which you can put content, like text or images (giving you more options than the input button type)</li>
+        <li><code>&lt;select&gt;</code> element is used to create a drop-down list</li>
+        <li><code>&lt;option&gt;</code> defines an option in a select list.</li>
+        <li><code>&lt;optgroup&gt;</code> is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user</li>
+        <li><code>&lt;fieldset&gt;</code> is used to group related elements in a form, by drawing a box around the related elements</li>
+        <li><code>&lt;label&gt;</code> defines a label for an input element, and using the for attribute you may reference the input element, making the label clickable</li>
         </ul>
 
         <h3>A form example</h3>
@@ -204,30 +204,30 @@
         
         <h3>Block-level Elements</h3>
         <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
-        <div style="border: 1px solid gray;">This &lt;div&gt; element is a block-level element.</div>
+        <div style="border: 1px solid gray;">This <code>&lt;div&gt;</code> element is a block-level element.</div>
         <p>Examples of block-level elements:</p>
         <ul style="list-style: none">
-            <li>&lt;div&gt;</li>
-            <li>&lt;h1&gt; - &lt;h6&gt;</li>
-            <li>&lt;p&gt;</li>
-            <li>&lt;form&gt;</li>
+            <li><code>&lt;div&gt;</code></li>
+            <li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></li>
+            <li><code>&lt;p&gt;</code></li>
+            <li><code>&lt;form&gt;</code></li>
         </ul>
         
         <h3>Inline Elements</h3>
-        <p>An inline element does not start on a new line and only takes up as much width as necessary. <span style="border: 1px solid gray;">This is an inline &lt;span&gt; element inside a paragraph.</span> Examples of inline elements:</p>
+        <p>An inline element does not start on a new line and only takes up as much width as necessary. <span style="border: 1px solid gray;">This is an inline <code>&lt;span&gt;</code> element inside a paragraph.</span> Examples of inline elements:</p>
         <ul style="list-style: none">
-            <li>&lt;span&gt;</li>
-            <li>&lt;a&gt;</li>
-            <li>&lt;img&gt;</li>    
+            <li><code>&lt;span&gt;</code></li>
+            <li><code>&lt;a&gt;</code></li>
+            <li><code>&lt;img&gt;</code></li>    
         </ul>
         
         <h2>Special Characters</h2>
-		<p>Special characters are charachters like [] &lt; &gt; {} " " ' ' &amp; &trade; &copy; and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the &lt; and &gt; special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like &lt;, &gt; and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
+		<p>Special characters are charachters like [] <code>&lt; &gt;</code> {} " " ' ' &amp; &trade; &copy; and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the <code>&lt; and &gt;</code> special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like <code>&lt;, &gt;</code> and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
 		<p>Some of the most used ones are:</p>
 			<ul style="list-style: none">
 				<li>&amp; : &amp;amp;</li>
-				<li>&lt; : &amp;lt;</li>
-				<li>&gt; : &amp;gt;</li>
+				<li><code>&lt; : &amp;lt;</li>
+				<li>&gt;</code> : &amp;gt;</li>
 				<li>&commat; : &amp;commat;</li>
 				<li>&trade; : &amp;trade;</li>
 				<li>&copy; : &amp;copy;</li>
@@ -299,22 +299,22 @@
 
         <h3>PRE</h3>
         <p>Poems and code...
-        Block element &lt;pre&gt; &lt;/pre&gt;
+        Block element <code>&lt;pre&gt;</code> <code>&lt;/pre&gt;</code>
         
-        Inline: &lt;code&gt; &lt;/code&gt;</p>
+        Inline: <code>&lt;code&gt;</code> <code>&lt;/code&gt;</code></p>
 
         <h3>Q and Blockquote</h3>
-        <p>Both &lt;q&gt; and &lt;blockquote&gt; are used for quotations. The &lt;q&gt; tag defines a short quotation, while the &lt;blockquote&gt; tag specifies a section that is quoted from another source.</p>
-        <p>The &lt;q&gt; tag is an inline tag, and they'll look like this <q>quotations are good</q> by default.</p>
-        <p>The &lt;blockquote&gt; tag, on the other hand, is a block type and will display on a new line, by default:</p>
+        <p>Both <code>&lt;q&gt;</code> and <code>&lt;blockquote&gt;</code> are used for quotations. The <code>&lt;q&gt;</code> tag defines a short quotation, while the <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source.</p>
+        <p>The <code>&lt;q&gt;</code> tag is an inline tag, and they'll look like this <q>quotations are good</q> by default.</p>
+        <p>The <code>&lt;blockquote&gt;</code> tag, on the other hand, is a block type and will display on a new line, by default:</p>
         <blockquote>quotations are good</blockquote>
-        <p>If you quote another web page, it's best practice to use the cite attribute for the &lt;blockquote&gt; element to refrence the origin:</p>
+        <p>If you quote another web page, it's best practice to use the cite attribute for the <code>&lt;blockquote&gt;</code> element to refrence the origin:</p>
         <pre>
-&lt;blockquote cite="https://en.wikipedia.org/wiki/Dill"&gt;
+<code>&lt;blockquote cite="https://en.wikipedia.org/wiki/Dill"&gt;</code>
     Dill (Anethum graveolens) is an annual herb in the celery family Apiaceae. 
     It is the only species in the genus Anethum. Dill is widely grown in 
     Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.
-&lt;/blockquote&gt; 
+<code>&lt;/blockquote&gt;</code> 
         </pre>
         <p>The cite URL is not visible on the page (but your browser knows):</p>
         <blockquote cite="https://en.wikipedia.org/wiki/Dill">
@@ -327,27 +327,27 @@
         <h3>iframe</h3>
 
         <h3>Comments</h3>
-        <p>&lt;!-- Comments are (usually) invisible --&gt;</p>
+        <p><code>&lt;!-- Comments are (usually) invisible --&gt;</code></p>
         
         <h2>Structuring elements</h2>
-		<p>HTML let us stucture elements based on their meaning, also referred to as semantic. For this we use the sectioning Elements, &lt;h1&gt;-&lt;h6&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, and &lt;section&gt;. We also have the semantic elements, &lt;header&gt; (<em>not to be confused with &lt;head&gt;</em>), &lt;main&gt;, and &lt;footer&gt;.</p>
+		<p>HTML let us stucture elements based on their meaning, also referred to as semantic. For this we use the sectioning Elements, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;section&gt;</code>. We also have the semantic elements, <code>&lt;header&gt;</code> (<em>not to be confused with <code>&lt;head&gt;</code></em>), <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
 
 		<h3>Nav</h3>
-        <p>The &lt;nav&gt; tag defines a set of navigation links. Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &lt;nav&gt; element is intended only for major block of navigation links.</p>
+        <p>The <code>&lt;nav&gt;</code> tag defines a set of navigation links. Notice that NOT all links of a document should be inside a <code>&lt;nav&gt;</code> element. The <code>&lt;nav&gt;</code> element is intended only for major block of navigation links.</p>
         <p>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.</p>
 		
 		<h3>Article</h3>
-        <p>The &lt;article&gt; tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
+        <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
 		
 		<h3>Section</h3>
-		<p>The &lt;section&gt; tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.</p>
+		<p>The <code>&lt;section&gt;</code> tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.</p>
 		
 		<h3>Aside</h3>
-        <p>The &lt;aside&gt; tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.</p>
+        <p>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.</p>
 
 		<h3>Footer</h3>
-        <p>The &lt;footer&gt; tag defines a footer for a document or section. A &lt;footer&gt; element should contain information about its containing element.</p>
-        <p>A &lt;footer&gt; element typically contains:</p>
+        <p>The <code>&lt;footer&gt;</code> tag defines a footer for a document or section. A <code>&lt;footer&gt;</code> element should contain information about its containing element.</p>
+        <p>A <code>&lt;footer&gt;</code> element typically contains:</p>
         <ul style="list-style: square">
                 <li>authorship information</li>
                 <li>copyright information</li>
@@ -357,36 +357,36 @@
                 <li>related documents</li>
         </ul>
         
-        <p>You can have several &lt;footer&gt; elements in one document.</p>
+        <p>You can have several <code>&lt;footer&gt;</code> elements in one document.</p>
 
         <h3>Div and Span</h3>
-		<p>The &lt;div&gt; tag defines a generic division or a section in an HTML document. The &lt;div&gt; tag is used to group block-elements to format them with CSS.</p>
-        <p>The &lt;span&gt; tag is used to group inline-elements in a document. The &lt;span&gt; tag provides no visual change by itself. The &lt;span&gt; tag provides a way to add a hook to a part of a text or a part of a document.</p>
+		<p>The <code>&lt;div&gt;</code> tag defines a generic division or a section in an HTML document. The <code>&lt;div&gt;</code> tag is used to group block-elements to format them with CSS.</p>
+        <p>The <code>&lt;span&gt;</code> tag is used to group inline-elements in a document. The <code>&lt;span&gt;</code> tag provides no visual change by itself. The <code>&lt;span&gt;</code> tag provides a way to add a hook to a part of a text or a part of a document.</p>
 
 		<h2>Document structure</h2>
 
 		<h3>The head</h3>
-        <p>The &lt;head&gt; element is a container for all the head elements. It can include a title for the document, scripts, styles, meta information, and more. The following elements can go inside the &lt;head&gt; element:</p>
+        <p>The <code>&lt;head&gt;</code> element is a container for all the head elements. It can include a title for the document, scripts, styles, meta information, and more. The following elements can go inside the <code>&lt;head&gt;</code> element:</p>
         <ul style="list-style: none">
-            <li>&lt;title&gt; (this element is required in an HTML document)</li>
-            <li>&lt;style&gt;</li>
-            <li>&lt;base&gt;</li>
-            <li>&lt;link&gt;</li>
-            <li>&lt;meta&gt;</li>
-            <li>&lt;script&gt;</li>
-            <li>&lt;noscript&gt;</li>
+            <li><code>&lt;title&gt;</code> (this element is required in an HTML document)</li>
+            <li><code>&lt;style&gt;</code></li>
+            <li><code>&lt;base&gt;</code></li>
+            <li><code>&lt;link&gt;</code></li>
+            <li><code>&lt;meta&gt;</code></li>
+            <li><code>&lt;script&gt;</code></li>
+            <li><code>&lt;noscript&gt;</code></li>
         </ul>
 
 		<h4>Meta</h4>
-		<p>Metadata is data (information) about data. The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines, or other web services. HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the &lt;meta&gt; tag.</p>
+		<p>Metadata is data (information) about data. The <code>&lt;meta&gt;</code> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines, or other web services. HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the <code>&lt;meta&gt;</code> tag.</p>
         <ul style="list-style: none">
-            <li>&lt;meta charset="UTF-8"&gt;</li>
-            <li>&lt;meta name="description" content="Short description of this page"&gt;</li>
-            <li>&lt;meta name="author" content="Lasse H&aelig;gland"&gt;</li>
-            <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</li>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code></li>
+            <li><code>&lt;meta name="description" content="Short description of this page"&gt;</code></li>
+            <li><code>&lt;meta name="author" content="Lasse H&aelig;gland"&gt;</code></li>
+            <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
         </ul>
 		<h4>Title</h4>
-        <p>The &lt;title&gt; tag is <strong>required</strong> in all HTML documents and it defines the title of the document. The &lt;title&gt; element:</p>
+        <p>The <code>&lt;title&gt;</code> tag is <strong>required</strong> in all HTML documents and it defines the title of the document. The <code>&lt;title&gt;</code> element:</p>
         <ul>
             <li>defines a title in the browser toolbar</li>
             <li>provides a title for the page when it is added to favorites</li>
@@ -394,11 +394,11 @@
         </ul>
 	
 		<h3>The body</h3>
-		<p>The &lt;body&gt; tag defines the document's body. The &lt;body&gt; element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</p>
+		<p>The <code>&lt;body&gt;</code> tag defines the document's body. The <code>&lt;body&gt;</code> element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</p>
 
 		<h3>Example of a basic page structure</h3>
         <pre>
-&lt;!doctype html&gt;
+<code>&lt;!doctype html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
@@ -428,7 +428,7 @@
             Contact information, legal stuff, etc.
         &lt;/footer&gt;  
     &lt;/body&gt;
-&lt;/html&gt;                 
+&lt;/html&gt;</code>               
         </pre>
         
 		<h2>Validation</h2>
