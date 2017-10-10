@@ -65,13 +65,47 @@
 		<p>Links are a integral part of HTML. Hypertext, the HT in HTML, is any text format that uses (hyper-) links to reference more content that the reader can immediately access.</p>	
         
         <h3>URL</h3>
-        >>>> EXAMPLES
-        
+        <p>A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably.</p>
+
+        <p id="URI">Every HTTP URL conforms to the syntax of a generic URI. A generic URI is of the form: </p>
+		<pre>
+	<code>scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]</code></pre>
+
+        <dl>
+            <dt>scheme</dt> 
+            <dd>Which protocol to use, ie. http(s), ftp, mailto, file, data, and irc</dd>
+            <dt>//</dt>
+            <dd>(two slashes), archaic convention, based on the root of any Unix system</dd>
+            <dt>authority part</dt>
+            <dd>username and password</dd>
+            <dt>host</dt>
+            <dd>domain name or IP address</dd>
+            <dt>port</dt>
+            <dd>TCP network port (ref. http://localhost:8080/)</dd>
+            <dt>path</dt>
+            <dd>where to find the actual data (typically a hierarchal path and file name)</dd>
+            <dt>query</dt>
+            <dd>starting with the ? is a query string of non-hierarchical data in attribute–value pairs</dd>
+            <dt>fragment</dt>
+            <dd>starting with the # is an identifier to a secondary resource</dd>
+        </dl>
+
         <h3>A</h3>
-        >>>> EXAMPLES
+        <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+
+        <p>The most important attribute of the <code>&lt;a&gt;</code> element is the href attribute, which indicates the link's destination: <br>
+        <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code></p>
+
+        <p>Here is an example with a link to <a href="https://www.w3schools.com">W3Schools.com</a>.</p>
+
+        <p>Another example with a link to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN web docs' HTML page</a>.</p>
 
         <h3>Targets</h3>
-        >>>> EXAMPLES
+		<p>The target attribute specifies where to open the linked document. The default is "_self", which opens the linked document in the same frame/window as it was clicked. The "_blank" opens in a new browser window (or tab, depending on your settings): <br><code>&lt;a href="url" target="_blank"&gt;link text&lt;/a&gt;</code></p>
+		
+		<p>Here is an example with a link to <a href="https://www.w3schools.com" target="_blank">W3Schools.com</a>, that will open in a new window (or tab).</p>
+
+        <p>Another example with a link to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN web docs' HTML page</a>, also opening in a new window (or tab).</p>
         
         <h3>Anchors</h3>
         <p>With anchors you can and link to special parts of any HTML page that has an unique id attribute. To link to the attribute whit the id="anchorname", you use a link like this:   <code>&lt;a&nbsp;href="http://whatever.test/yourpage.html#anchorname"&gt;</code>. Note the "#" to indicate the id of the anchor. (In earlier versions of HTML anchors relied on the name attribute, and not id, but the name attribute is not officially supported in HTML5.)</p>	
@@ -118,7 +152,7 @@
         </ol>
         
 		<h3>Description lists</h3>	
-        <p>The <code>&lt;dl&gt;</code> tag defines a description list, in conjunction with <code>&lt;dt&gt;</code> (defines terms/names) and <code>&lt;dd&gt;</code> (describes each term/name).</p>
+        <p>The <code>&lt;dl&gt;</code> tag defines a description list, in conjunction with <code>&lt;dt&gt;</code> (defines terms/names) and <code>&lt;dd&gt;</code> (describes each term/name), for usage see <a href="#URI">URL</a> above.</p>
         
         <dl>
             <dt>HTML</dt>
@@ -137,13 +171,12 @@
 		
         <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf">
         
-        <p>It can also be scaled using the width and height attributes (here is widht set to 256 pixels):</p>
+        <p>It can also be scaled using the width and height attributes (here is width set to 256 pixels):</p>
         
         <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf" width="256">
         
         <p>You can also set image widths with CSS.</p>
         <p><strong>Note</strong>: While most images will scale down gracefully, very few (with the exeptions of SVGs will scale up, so be very careful about setting the width/height to more than the original image. Also, if you set both width and height, make sure you retain the same aspect ratio to protect the image propotions.</p>
-
 		
         <h3>Common image types</h3>
         <p>Technically not a part of HTML, it's still useful to know the most common image types used on the web:</p>
@@ -220,8 +253,31 @@
             <li><code>&lt;a&gt;</code></li>
             <li><code>&lt;img&gt;</code></li>    
         </ul>
-        
-        <h2>Special Characters</h2>
+          
+        <h2>Style</h2>
+        <p>The <code>&lt;style&gt;</code> tag is used to define style information for an HTML document. Inside the <code>&lt;style&gt;</code> element you specify how HTML elements should render in a browser. Each HTML document can contain multiple <code>&lt;style&gt;</code> tags.</p>
+
+		<p>Example:</p>
+		<pre>
+	<code>&lt;style&gt;
+		h2 { text-align:center; }
+		a:link, a:visited { color: #000066; text-decoration: none; }
+	&lt;/style&gt;</code></pre>
+		<p>Here all <code>&lt;h2&gt;</code> headers will be centered, and any links will be dark blue and not underlined.</p>
+		<p><b>Note</b> that in earlier versions of HTML you could place the style tag anywhere, but inline style tags are no longer allowed. Keep them in the <code>&lt;head&gt;</code> or external style sheets.</p>
+		
+		<p>Style can also be set, for a specific tag, using the <b>style attribute</b> which specifies an inline style for an element. The style attribute will override any style set globally, e.g. styles specified in the <code>&lt;style&gt;</code> tag or in an external style sheet.</p>
+		
+		<p>Example:</p>
+		<pre>
+	<code>&lt;h1 style="color:blue;text-align:center"&gt;</code>This is a header<code>&lt;/h1&gt;</code>
+	<code>&lt;p style="color:green"&gt;</code>This is a paragraph.<code>&lt;/p&gt;</code> </pre>
+		<p>Here this specific header will be center aligned, while the following paragraph - and only that - would be blue in colour.</p>
+		
+
+        <h2>Ymse (miscellaneous)</h2>
+
+        <h3>Special Characters</h3>
 		<p>Special characters are charachters like [] <code>&lt; &gt;</code> {} " " ' ' &amp; &trade; &copy; and might also include others, like scandinavian characters, æ, ø and å, like in "blåbærsyltetøy". We've already seen examples of this on the page, with all the tags using the <code>&lt; and &gt;</code> special characters. To display these consistantly, we use HTML entities for some (if not all) of these. Some of them are strongly recommended, and should be used according to the standard, like <code>&lt;, &gt;</code> and &amp; because they can break your page, others aren't necessary, but to should be used to make sure the correct character are displayed across different browsers and languages.</p>
 		<p>Some of the most used ones are:</p>
 			<ul style="list-style: none">
@@ -240,12 +296,7 @@
 		
 		<p><a href="https://dev.w3.org/html5/html-author/charref">List of HTML character entities</a></p>
 		<p><a href="http://unicode.org/charts/">List of unicode character codes for scripts and symbols</a></p>
-        
-        <h2>Style</h2>
-        <p>>>>>>>>>  Inline style > External and internal style sheets (order matters) > Browser defaults</p>
-
-        <h2>Ymse (miscellaneous)</h2>
-
+      
         <h3>Whitespace</h3>
 		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. (View the page source for this paragraph to see what's going on). To add additional (white) space, you need to use the &amp;nbsp; (non breaking space character), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
 		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
@@ -295,14 +346,27 @@
         </table>
 
         <h3>ABBR</h3>
-        <p>>>>>>>>>></p>
-        <p>Mouse over the dotted abbrivations, to see what they abbriviate: <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+        <p>The <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "Mr.", "Dec.", "ASAP", "ATM". An abbreviation and an acronym are both shortened versions of something else. Both are often represented as a series of letters. Marking up abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+        <p>Mouse over these two abbrivations, to see what they abbriviate: <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+        <p><b>Note:</b> The <code>&lt;abbr&gt;</code> tag used to be styled with underline dots by default, but some browsers no longer does this (Safari wiil not, Chrome does), so if you want to style them consistently you need to apply a style yourselves, like this: <code>&lt;abbr title="Hyper Text Markup Language" style="text-decoration: none; border-bottom: 1px dotted black;"&gt;HTML&lt;/abbr&gt;</code>  (or set style for all abbrivations in the style tag/stylesheets), then it will look like this across browsers: <abbr title="Hyper Text Markup Language" style="text-decoration: none; border-bottom: 1px dotted black;">HTML</abbr>.</p>
 
         <h3>PRE</h3>
-        <p>>>>>>>>>>> Poems and code...
-        Block element <code>&lt;pre&gt;</code> <code>&lt;/pre&gt;</code>
+        <p>The <code>&lt;pre&gt;</code>  tag defines preformatted text. Text in a <code>&lt;pre&gt;</code>  element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks. The <code>&lt;pre&gt;</code>  element is a block element, while the related <code>&lt;code&gt;</code> tag is an inline element. <code>&lt;pre&gt;</code> is good for code blocks or poems and other places where you want to preserve white spaces:</p>
         
-        Inline: <code>&lt;code&gt;</code> <code>&lt;/code&gt;</code></p>
+        <pre>
+	#include &lt;iostream&gt;
+	int main()
+	{
+	  std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+	  return 0;
+	}	        
+        </pre>
+        
+        <pre>
+	Haikus are easy
+	But sometimes they don't make sense
+	Refrigirator
+        </pre>
 
         <h3>Q and Blockquote</h3>
         <p>Both <code>&lt;q&gt;</code> and <code>&lt;blockquote&gt;</code> are used for quotations. The <code>&lt;q&gt;</code> tag defines a short quotation, while the <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source.</p>
@@ -326,6 +390,11 @@
         
         
         <h3>iframe</h3>
+        <p>An iframe is used to display a web page within a web page. An HTML iframe is defined with the <code>&lt;iframe&gt;</code> tag:</p>
+		<pre>
+	<code>&lt;iframe src="URL"&gt;&lt;/iframe&gt;</code></pre>
+		<p>The src attribute specifies the URL (web address) of the inline frame page.</p>
+
 
         <h3>Comments</h3>
         <p><code>&lt;!-- Comments are (usually) invisible --&gt;</code></p>
@@ -440,7 +509,7 @@
 		<footer>
             <hr>
             <p>Collected by: Lasse H&aelig;gland<br>Contact information: <a href="mailto:lasse.hagland@noroff.no">lasse.hagland@noroff.no</a>.<br>
-            Last updated: 2017-09-27<br>
+            Last updated: 2017-10-10<br>
             <a href="https://www.noroff.no/">
                 <img src="media/Noroff.png" alt="Noroff logo" title="Noroff">
             </a></p>
