@@ -20,12 +20,14 @@
         <code>&lt;h1&gt;My title&lt;/h1&gt;</code>
         </pre>
         <p>Here <code>&lt;h1&gt;</code> is the tag (with <code>&lt;/h1&gt;</code> as the closing tag), and "My title" is the content.</p>
+
         <h3>Attribute</h3>
         <p>An <strong>attribute</strong> gives more info or function to the elements (tags), like this:</p>
         <pre>
         <code>&lt;h1 lang="en"&gt;My title&lt;/h1&gt;</code>
         </pre>
         <p>Here the "lang" is an attribute, telling the browser that the content of this element is in English.<p>
+
         <h3>Nested tags</h3>
 		<p>Nested tags are when you use a tag within a tag, like this, where the <code>&lt;h1&gt;</code> is nested within the <code>&lt;body&gt;</code>: 
         <pre>
@@ -176,7 +178,7 @@
         <img src="media/BringMeAnotherSmurf.jpg" alt="Baby wants another Smurf" width="256">
         
         <p>You can also set image widths with CSS.</p>
-        <p><strong>Note</strong>: While most images will scale down gracefully, very few (with the exeptions of SVGs will scale up, so be very careful about setting the width/height to more than the original image. Also, if you set both width and height, make sure you retain the same aspect ratio to protect the image propotions.</p>
+        <p><strong>Note</strong>: While most images will scale down gracefully, very few <small>(with the exeptions of SVGs)</small> will scale up, so be very careful about setting the width/height to more than the original image. Also, if you set both width and height, make sure you retain the same aspect ratio to protect the image propotions.</p>
 		
         <h3>Common image types</h3>
         <p>Technically not a part of HTML, it's still useful to know the most common image types used on the web:</p>
@@ -214,11 +216,11 @@
                 <option value=0>Select an option</option>
                 <option value="a">Option a</option>
                 <option value="b">Option b</option>        
-            </select><br>
+            </select><br><br>
             <fieldset>
                 <legend>Select one: </legend>
                 <label for="radioa">Cats </label><input type="radio" name="animal" id="radioa" value="cats"> or <label for="radiob">dogs </label><input type="radio" name="animal" id="radiob" value="dogs">
-            </fieldset>
+            </fieldset><br>
             <fieldset>
                 <legend>Select any extras for your burger: </legend>
                 <label for="bacon">Bacon</label><input type="checkbox" name="burger" id="bacon" value="bacon">
@@ -226,9 +228,9 @@
                 <label for="tomato">Tomato</label><input type="checkbox" name="burger" id="tomato" value="tomato">
                 <label for="pickled_cucumber">Pickled Cucumber</label><input type="checkbox" name="burger" id="pickled_cucumber" value="pickled_cucumber">
                 <label for="jalapenos">Jalapenos</label><input type="checkbox" name="burger" id="jalapenos" value="jalapenos">
-            </fieldset>
+            </fieldset><br>
             <label for="fname">First name: </label><input type="text" name="firstname" id="fname"><br>
-            <label for="lname">Last name: </label><input type="text" name="lastname" id="lname"><br>
+            <label for="lname">Last name: </label><input type="text" name="lastname" id="lname"><br><br>
             <input type="submit" value="Submit">
         </form>
 
@@ -298,8 +300,8 @@
 		<p><a href="http://unicode.org/charts/">List of unicode character codes for scripts and symbols</a></p>
       
         <h3>Whitespace</h3>
-		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. (View the page source for this paragraph to see what's going on). To add additional (white) space, you need to use the &amp;nbsp; (non breaking space character), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
-		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations (or need to be sure that you will not get a line break between two&nbsp;words).</p>
+		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. (View the page source for this paragraph to see what's going on). To add additional (white) space, you need to use the <b><code>&amp;nbsp;</code></b> (non breaking space character), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
+		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations, or need to be sure that you will not get a line break between two&nbsp;words (like the previous "two words").</p>
 
         <h3>Tables</h3>
 <!--
@@ -508,11 +510,14 @@
 
 		<footer>
             <hr>
-            <p>Collected by: Lasse H&aelig;gland<br>Contact information: <a href="mailto:lasse.hagland@noroff.no">lasse.hagland@noroff.no</a>.<br>
-            Last updated: 2017-10-10<br>
-            <a href="https://www.noroff.no/">
-                <img src="media/Noroff.png" alt="Noroff logo" title="Noroff">
-            </a></p>
+            <p>
+                <a href="https://www.noroff.no/">
+                    <img src="media/Noroff.png" alt="Noroff logo" title="Noroff" style="float: left; padding-right: 10px; ">
+                </a>
+                Collected by: Lasse H&aelig;gland<br>
+                E-mail: <a href="mailto:lasse.hagland@noroff.no">lasse.hagland@noroff.no</a><br>
+                Last updated: 2017-10-11            
+            </p>
         </footer>
 
     </body>
