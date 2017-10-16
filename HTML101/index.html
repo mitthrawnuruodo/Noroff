@@ -301,9 +301,18 @@
       
         <h3>Whitespace</h3>
 		<p>No matter how many spaces you add to a paragraph, the browser will remove them, like                   this. (View the page source for this paragraph to see what's going on). To add additional (white) space, you need to use the <b><code>&amp;nbsp;</code></b> (non breaking space character), like &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.</p>
-		<p>Do not use this for formatting, there's better ways to do that, ie. with CSS, but if you need an extra space or two on chosen locations, or need to be sure that you will not get a line break between two&nbsp;words (like the previous "two words").</p>
+		<p>Do not use this for formatting, there's better ways to do that, eg. with CSS, but if you need an extra space or two on chosen locations, or need to be sure that you will not get a line break between two&nbsp;words (like the previous "<code>two&ampnbsp;words</code>").</p>
 
         <h3>Tables</h3>
+        <p>The <code>&lt;table&gt;</code> tag defines an HTML table.
+
+An HTML table consists of the <code>&lt;table&gt;</code> element and one or more <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements.
+
+The <code>&lt;tr&gt;</code> element defines a table row, the <code>&lt;th&gt;</code> element defines a table header, and the <code>&lt;td&gt;</code> element defines a table cell.
+
+A more complex HTML table may also include <code>&lt;caption&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;colgroup&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>, and <code>&lt;tbody&gt;</code> elements.</p>
+
+<p>Note: Tables should not be used for page layout! Historically, some Web authors have misused tables in HTML as a way to control their page layout. However, there are a variety of alternatives to using HTML tables for layout, primarily using CSS.</p>
 <!--
         <style>
         table {
