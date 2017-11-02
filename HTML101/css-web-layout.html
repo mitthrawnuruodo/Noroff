@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whatever</title>
+	<meta charset="utf-8">
+	<style>
+
+		body {
+		  margin: 0;
+		  font-family: sans-serif; 
+		}
+	
+		header {
+		    background-color: LightGray;
+		    padding: 20px;
+		    text-align: center;
+		}
+
+		nav {
+		    overflow: hidden;
+		    background-color: DarkGray;
+		}
+		
+		nav a {
+		    float: left;
+		    display: block;
+		    color: Black;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		
+		nav a:hover {
+		    background-color: DimGray;
+		    color: white;
+		}
+
+		main {
+			background: #fafafa;	
+		}
+		section, aside {
+		    float: left;
+		    padding: 15px;
+			margin: 0;
+
+			box-sizing: border-box; 
+			/* border-box: The width and height properties (and min/max properties) includes content, padding and border, but not the margin */
+		}
+		section {
+			width: 60%;
+		}
+		section:first-of-type {
+			width: 20%;
+		}
+		aside {
+			width: 20%;
+		}		
+		section:after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+		
+		@media (max-width:600px) {
+		    section, aside {
+		        width: 100% !important; /* Important to override section:first-of-type */
+		    }
+		}
+		
+		footer {
+			clear: left;
+		    background-color: LightGray;
+		    padding: 10px;
+		    text-align: center;
+		}
+	</style>
+
+
+</head>
+<body>
+		
+	<header>
+	  	<p><b>Header</b></p>
+	</header>
+	
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">About us</a>
+		<a href="#">Our stuff™</a>
+	</nav>
+
+	<main>
+	  	<section>
+	    	<h2>Left Column</h2>
+	    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. </p>
+	  	</section>
+	  	<section>
+		    <h2>Main Column</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+	  	</section>
+	  	<aside>
+		    <h2>Aside Column</h2>
+		    <p>Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+	  	</aside>
+	</main>
+
+
+	<footer>
+	  	<p>Footer</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

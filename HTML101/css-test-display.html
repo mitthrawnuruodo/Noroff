@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display example</title>
+	<style>
+		#panel, .flip {
+		   	font-size: 16px;
+		    padding: 10px;
+		    text-align: center;
+		    background-color: #4CAF50;
+		    color: white;
+		    border: solid 1px #a6d8a8;
+		    margin: auto;
+		    cursor:pointer;
+		}
+		
+		#panel {
+		    display: none;
+		    cursor:auto;
+		}
+		.codespan{
+			color:crimson;
+			padding: 0 2px;
+		}
+		h1 {
+			visibility: visible; /* visible|hidden|collapse */ 
+		}
+	</style>
+	<script>
+		function myShowFunction() {
+		    document.getElementById("panel").style.display = "block";
+		}
+		function myShowAndHideFunction() {
+			var e = document.getElementById("panel");
+			e.style.display = (e.style.display == "block") ? "none" : "block";
+		}
+	</script>
+</head>
+<body>
+
+	<h1>The display Property</h1>
+
+	<p class="flip" onclick="myShowFunction()">Click to show panel</p>
+
+	<div id="panel">
+	  	<p>This panel contains a &lt;div&gt; element, which is hidden by default (<code class="codespan">display: none</code>).</p>
+	  	<p>It is styled with CSS, and we use JavaScript to show it (change it to (<code class="codespan">display: block</code>).</p>
+	</div>
+	<hr>
+	<p>Check out the source code for this file</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

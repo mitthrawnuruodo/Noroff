@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested List</title>
+	<style>
+		ol {
+			list-style-type: none;
+			margin: 0;
+			padding: 0; 
+		}
+		ol li {
+			padding: 0; 
+			margin: 2px; 
+		}		
+		ol li ol {
+			list-style-type: lower-alpha;
+			padding: 0 0 0 30px; 
+
+		}
+		ol li ul {
+			list-style-type: square;
+			padding: 0 0 0 30px; 
+		}
+		ol li ul li:last-child {
+			list-style-type: circle;
+			font-weight: bold; 
+		}		
+		ol li ol li:nth-child(3){
+			font-weight: bold; 
+		}
+		ol > li {
+			color: red; 
+		}		
+		ol > li > * > li {
+			color: green; 
+		}
+		</style>
+
+</head>
+<body>
+
+	<ol>
+	  	<li>HTML
+	  		<ul>
+		  		<li>HTML 2.0</li>
+		  		<li>HTML 3.2</li>
+		  		<li>HTML 4.01</li>
+		  		<li>XHTML 1.1</li>
+		  		<li>HTML 5</li>
+		  	</ul>
+		</li>	
+		<li>CSS
+	  		<ol>
+		  		<li>CSS level 1</li>
+		  		<li>CSS 2.1</li>
+		  		<li>CSS 3</li>
+		  		<li>CSS level 4</li>
+		  </ol>
+		</li>
+		<li>JavaScript
+	  		<ul>
+		  		<li>ECMAScript 1</li>
+		  		<li>ECMAScript 3</li>
+		  		<li>ECMAScript 5.1</li>
+		  		<li>ECMAScript 6</li>
+		  		<li>ECMAScript 7</li>
+		  	</ul>
+		</li>
+	</ol>
+	<p>Check out the source code for this file</p>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

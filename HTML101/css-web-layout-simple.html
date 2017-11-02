@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dill</title>
+	<meta charset="utf-8">
+	<style>
+		* {
+		    box-sizing: border-box;
+		}
+		body { 		    
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		header, footer {
+		    background-color: DarkSlateGray;
+		    color: Bisque;
+		    padding: 5px 15px;
+		}
+		nav, article {
+		    float: left;
+		    padding: 15px;
+		}
+		.clearfix::after {
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+		nav {
+		    width: 27%;
+		}
+		article {
+		    width: 73%; /* 63% without the box-sizing */
+		}
+		nav ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		}
+		nav li {
+		    padding: 8px;
+		    margin-bottom: 8px;
+		    background-color: LightSeaGreen;
+		    color: #ffffff;
+		}
+		nav li:hover {
+		    background-color: DarkSlateGray;
+		}
+		nav a { 
+			text-decoration: none; 
+			color: inherit; 
+			display: inline-block; 
+		}
+		article h1 { margin-top: 0; }
+		header div { 
+			letter-spacing: 2px; 
+			font-family: monospace; 
+			font-size: 2.4em; 
+			margin: 15px 5px; 
+		}
+		footer a { color: inherit; }
+	</style>
+
+</head>
+<body>
+
+	<header>
+		<div>Dill</div>
+	</header>
+	
+	<div class="clearfix">
+	
+	  	<nav>
+	    	<ul>
+			    <li><a href="">Growth</a></li>
+			    <li><a href="">Etymology</a></li>
+			    <li><a href="">Culinary use</a></li>
+			    <li><a href="">Traditional uses</a></li>
+				<li><a href="">Cultivation</a></li>
+			</ul>
+	  	</nav>
+	
+	  	<article>
+	    	<h1>Dill (Anethum graveolens)</h1>
+			<p>Dill is an annual herb in the celery family Apiaceae. It is the only species in the genus Anethum. Dill is widely grown in Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.</p>
+			<img src="media/dill.jpg" alt="Dill" style="width: 100%">
+	  	</article>
+	
+	</div>
+	
+	<footer>
+	  	<p>Source: <a href="https://en.wikipedia.org/wiki/Dill">Wikipedia</a></p>
+	</footer>
+			
+</body>
+</html>
