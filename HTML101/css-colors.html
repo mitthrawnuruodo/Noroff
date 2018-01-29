@@ -14,10 +14,13 @@
 	
 	<style>
 		body { background: black; font-size: 32px; }
+		p { padding: 0; margin: 0; }
+		h1 { color: white; font-size: 36px; text-align: center; }
 	</style>
 
 </head>
 <body>
+	<h1>CSS Color names, a quick reference</h1>
 	<p>
 		<span style="color: #F0F8FF">AliceBlue</span>, 
 		<span style="color: #FAEBD7">AntiqueWhite</span>, 
@@ -168,6 +171,27 @@
 		<span style="color: #FFFF00">Yellow</span>, 
 		<span style="color: #9ACD32">YellowGreen</span>	
 	</p>
+	<button id="black" disabled="disabled" onclick="toggleColour()">Black background</button>
+	<button id="white" onclick="toggleColour()">White background</button>
+	<script>
+		function toggleColour() {
+			if ((!document.body.style.backgroundColor) || (document.body.style.backgroundColor=="black")) {
+				document.body.style.backgroundColor = "white";
+				//document.body.style.color = "white";
+				document.querySelector('p').style.color = "white";
+				document.querySelector('h1').style.color = "black";
+				document.getElementById("black").disabled = false;
+				document.getElementById("white").disabled = true;
+			} else {
+				document.body.style.backgroundColor = "black";
+				//document.body.style.color = "black";
+				document.querySelector('p').style.color = "black";
+				document.querySelector('h1').style.color = "white";
+				document.getElementById("black").disabled = true;
+				document.getElementById("white").disabled = false;
+			}
+		}
+	</script>
 </body>
 </html>
 
