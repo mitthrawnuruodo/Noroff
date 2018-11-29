@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My form</title>
+    <style>
+        * { font-size: 24px }
+        label { 
+            display: inline-block; 
+            padding-top: 15px; 
+            width: 180px;
+            text-align: right;
+        }
+        small { 
+            font-size: 50%; 
+            display: block; 
+            margin-left: 190px;
+        }
+        input#number {width: 3em; margin-left: 2px; }
+        button{ margin-left: 190px; }        
+    </style>
+</head>
+<body>
+
+<form action="success.php" method="get">
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required><br>
+
+    <label for="emailid">E-mail:</label>
+    <input type="email" name="email" id="emailid" required><br>
+ 
+    <label for="number">Enter a number:</label>
+    <input type="number" name="number" id="number" min="1" max="10" required><br> 
+
+    <!-- <label for="url">URL</label>
+    <input type="text" name="url" id="url" pattern="https?://.+" required> -->
+    <!--<small>Remember http:// or https://</small>-->
+    
+    <!-- <label for="url">URL</label>
+    <input type="url" name="url" id="url" required> -->
+    <!--<small>Remember http:// or https://</small>-->
+
+    <label for="ac">Airport code:</label>
+    <input type="text" name="airport_code" id="ac"
+pattern="[A-Za-z]{3}" title="Three letter airport code" required><br>
+    <small>Use the three letter code</small><br>
+
+    <button type="submit">Submit form</button>
+    <!-- <input type="submit" value="Submit me"> -->
+</form>
+
+</body>
+</html>

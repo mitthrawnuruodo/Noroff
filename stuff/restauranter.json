@@ -1,0 +1,14 @@
+{ 
+    "restaurants": [
+        { "name": "Alex Sushi", "branch": "Solli Plass", "address": "Cort Adelers gate 2, 0254 Oslo", "url": "https://www.alexsushi.no/restaurant/solliplass/" },
+        { "name": "Din Tai Fung", "branch": "Yee Wo Branch", "address": "Shop G3-11, GF, 68 Yee Wo St., Causeway Bay ", "url": "http://www.dintaifung.com.hk/shope.php?country=1" },
+        { "name": "Din Tai Fung", "branch": "Silvercord", "address": "Shop 306, 3F, Silvercord, 30 Canton Rd., Tsim Sha Tsui, Kowloon", "url": "http://www.dintaifung.com.hk/shope.php?country=1" },
+        { "name": "Dumpling's Legend", "branch": null, "address": "15-16 Gerrard St, London W1D 6JE, UK", "url": "http://www.dumplingslegend.com" },
+        { "name": "Grimaldi's", "branch": "Under the Brooklyn Bridge", "address": "1 Front Street, Brooklyn, NY 11201", "url": "http://www.grimaldis-pizza.com/" },
+        { "name": "Guangdong House", "branch": null, "address": "Marken 11, 5017 BERGEN", "url": null },
+        { "name": "Inside", "branch": "Live & Rock Café", "address": "Vaskerelvsmuget 7, 5014 Bergen ", "url": "http://insiderockcafe.no" },
+        { "name": "Nobu", "branch": "London Berkeley St.", "address": "15 Berkeley Street, London", "url": "https://www.noburestaurants.com/london-berkeley-st/experience/" },
+        { "name": "Nobu", "branch": "Hong Kong", "address": "18 Salisbury Road, Tsim Tsa Tsui", "url": "https://www.noburestaurants.com/hong-kong/experience/" },
+        { "name": "Pizza Ciro", "branch": null, "address": "Via della Mercede 43, Piazza Maddalena, 00186 Rome, Italy", "url": null }
+    ]
+}

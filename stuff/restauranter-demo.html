@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants of the World</title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Restaurants of the World</h1>
+
+    <ul id="myRestaurants"></ul>
+
+    <div id="map" style="width: 480px; height: 320px; border: 1px solid red;"></div>
+
+<script>
+/*
+ *  Restaurants
+ *
+ */
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      result = this.responseText;
+      myObj = JSON.parse(result);  // Parse JSON til et objekt og lever videre...
+      listRestaurants(myObj.restaurants); // send listen i objektet til funksjon for å lage en HTML-liste
+        //initializeMap(); // Initier kartet
+    }
+    //console.log (this.readyState, this.status);
+};
+xhttp.open("GET", "restauranter.json?time="+(new Date()).valueOf()+"", true);
+xhttp.send();
+
+function listRestaurants (list) {
+    //console.log (list);
+    var ul = document.getElementById('myRestaurants');
+    for (var r of list) {
+        var li = document.createElement("li"); // Lag liste-element
+        var text = r.name; // Lag en tekststreng med restaurantnavn
+        if (r.branch) text += " ("+r.branch+")"; // Hvis det er en filial ta med denne
+        var textNode = document.createTextNode(text + " "); // Sett tekst inn i node
+        li.appendChild(textNode); // Legg node til listeelement
+
+        if (r.url) { // Hvis det er lagt ved en URL
+            var a = document.createElement("a"); // Lag et a element 
+            a.appendChild(document.createTextNode("Link")); // Legg til tekstnode
+            a.href = r.url; // Legg til URL
+            a.target = "_blank"; // Åpne i ny tab/nytt vindu
+            li.appendChild(a); // Legg til listen
+        }
+
+        if (r.address) { // Hvis det er lagt ved en adresse
+            var btn = document.createElement("button");
+            btn.appendChild(document.createTextNode("Show on map"));
+            btn.style.marginLeft = "10px";
+            var att = document.createAttribute('onclick');
+            att.value = "visKart('"+r.address+"')"; 
+            btn.setAttributeNode(att);
+            li.appendChild(btn);
+        }
+
+        ul.appendChild(li); // Sett listelement inn i listen på siden
+    }
+}
+
+function visKart(addr) {
+    //console.log (addr, map);
+    if (map === undefined) initializeMap(); // Sjekk om kartet er initialisert
+    codeAddress(addr); // Finn adressen og vis den
+}
+
+/*
+ *  Map
+ *
+ */
+var geocoder;
+var map;
+var lastMarker;
+  
+function initializeMap() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(0, 0);
+    var mapOptions = {
+      zoom: 1,
+      center: latlng
+    };
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function codeAddress(address) {
+    geocoder.geocode( { 'address': address }, function(results, status) {
+        if (status == 'OK') {
+            if (lastMarker) lastMarker.setMap(null);
+            map.setCenter(results[0].geometry.location);
+            map.setZoom(15);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location,
+              animation: google.maps.Animation.DROP
+            });
+            lastMarker = marker;
+        } else {
+            console.error('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTrpeIrFmuWL_bGnvNCjAFrXrdU_H3NmQ&callback=initializeMap"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
