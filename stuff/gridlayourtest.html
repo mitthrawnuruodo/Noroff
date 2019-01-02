@@ -34,8 +34,7 @@ h1::after {
 @media screen and (max-width: 800px) {
     .grid-container {
         grid-template-areas:
-            'header header header header header header'
-            'menu menu menu menu menu menu'        
+            'header header header header header menu'
             'main main main main aside aside'
             'footer footer footer footer footer footer';
         }
@@ -46,11 +45,10 @@ h1::after {
 @media screen and (max-width: 600px) {
     .grid-container {
         grid-template-areas:
-            'header'
-            'menu'
-            'main'
-            'aside'
-            'footer';
+            'header menu'
+            'main main'
+            'aside aside'
+            'footer footer';
     }
     h1::after {
         content: " (mobile)";
