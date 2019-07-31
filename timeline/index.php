@@ -24,9 +24,9 @@
 		<div class="timeline">			
 <?php
 	//$here = '/Users/noro-lha/Documents/Noroff-til-geek/timeline'; // Change to something better online
-	$here = 'http://www.geek.no/noroff/timeline/';
-	$file = file_get_contents($here.'/trivia-data.json');
-	$json = json_decode($file, true);
+	$file = 'https://www.geek.no/noroff/timeline/'.'trivia-data.json';
+	$file_content = file_get_contents($file);
+	$json = json_decode($file_content, true);
 	//var_dump($json);
 ?>
 <?php foreach ($json['trivia'] as $trivia) { ?>
@@ -44,7 +44,18 @@
 		</div><!-- / Timeline -->
 
 		<hr>
-		<p>Sources: Mostly <a href="https://wikipedia.org" target="_blank">Wikipedia</a>. All dates (from 1583 and onwards) are according to <a href="https://xkcd.com/1179/" target="_blank">ISO 8601</a>. <span id="lastedited" style="white-space: nowrap;"></span> <a href="https://www.geek.no/">Geek.no</a>. </p>
+		<p>Sources: Mostly <a href="https://wikipedia.org" target="_blank">Wikipedia</a>. All dates (from 1583 and onwards) are according to <a href="https://xkcd.com/1179/" target="_blank">ISO 8601</a>. <span id="lastedited" style="white-space: nowrap;"><?php 
+			
+	$timestamp = filemtime('./trivia-data.json');
+	$date = date('Y-m-d H:i:s', $timestamp);
+	echo "Data last edited: " . $date;	
+	
+	$timestamp = filemtime(__FILE__);
+	$date = date('Y-m-d H:i:s', $timestamp);
+	echo " - File last edited: " . $date;
+
+?></span> <a href="https://www.geek.no/">Back to Geek.no</a>. </p>
+<!--
 		<script>
 			var edited = new Date(document.lastModified);
 			//var norskdato = edited.toLocaleDateString("nb-no");
@@ -59,5 +70,6 @@
 			if (min < 10) { min = "0" + min; }
 			document.getElementById("lastedited").innerHTML = "Last edited: " + year + "-" + month + "-" + date + " " + hrs + ":" + min + ".";
 		</script>
+-->
 	</body>
 </html>

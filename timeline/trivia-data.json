@@ -1,6 +1,6 @@
 {
 	"trivia": [
-		{ "date": "2014-10-28", "detail": "<b>HTML5</b> Standard Initial release", "img-src": "html5-w3c.jpg", "img-alt": "W3C and HTML5 Logos" }, 
-		{ "date": "2015-07-29", "detail": "<b>Microsoft Edge</b> launched, replacing Internet Explorer as the default web browser on all Microsofts platforms.", "img-src": "microsoft_edge_logo.png", "img-alt": "Microsoft Edge Logo" }
+		{ "date": "2014-10-28", "detail": "<b>HTML5</b> Standard Initial release", "img-src": "html5-w3c.jpg", "img-alt": "W3C and HTML5 logos" }, 
+		{ "date": "2015-07-29", "detail": "<b>Microsoft Edge</b> launched, replacing Internet Explorer as the default web browser on all Microsofts platforms.", "img-src": "microsoft_edge_logo.png", "img-alt": "Microsoft Edge logo" }
 	]
 }
