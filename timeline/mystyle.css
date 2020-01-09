@@ -6,6 +6,8 @@
 body {
   background-color: #474e5d;
   font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 130%;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -135,14 +137,14 @@ body {
  }
 
 /* Additional styling */ 
-h1 { color: white; text-align: center; border-bottom: 5px solid #FF9F55; margin-bottom: 0; padding: 5px 0px 10px; }
+h1 { color: white; text-align: center; border-bottom: 5px solid #FF9F55; margin-bottom: 0; padding: 5px 0px 10px; line-height: 130%; }
 hr { margin: 0; padding: 0; border: 0; border-bottom: 5px solid #FF9F55; }
 q { font-style: italic; font-weight: bold; color: #B3AB3B; }
 abbr { text-decoration: none; border-bottom: 1px dashed #474e5d; }
 .container img { max-width: 100%; padding-bottom: 6px; }
 .container { min-width: 280px; }
 .container:last-child { padding-bottom: 20px;  }
-.content h2 { padding: 5px 0 0 0; margin: 0; color: black; text-shadow: 1px 1px 2px #474e5d; }
+.content h2 { padding: 5px 0 2px 0; margin: 0; color: black; /*text-shadow: 1px 1px 2px #474e5d;*/ }
 .content p { padding: 5px 0 10px; margin: 0; }
 .content a { }
 body > p { color: white; font-size: small; }
